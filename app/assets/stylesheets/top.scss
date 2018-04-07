@@ -1,0 +1,116 @@
+// Place all the styles related to the top controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// =====================================
+// top ヘッダー
+// =====================================
+#couponBanner{
+  background: #8c1c33;
+  border: 1px solid  #444;
+  height: 60px;
+  &Row{
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
+    height: 60px;
+    cursor: pointer;
+  }
+}
+#gblHeaderStuck{
+  height: 51px;
+  background-color: #323232;
+  color:white;
+}
+
+// =====================================
+// top メイン
+// =====================================
+#contentHeader{
+  border: 1px solid  #444;
+}
+#mainTab >li a{
+  border: 1px solid #f0f0f0;
+}
+
+#contentHeader {
+    width: 100%;
+    background: #f0f0f0;
+}
+#headerInner{
+
+}
+
+#mainTab{
+  float: left;
+ &> li{
+    float: left;
+    // height: 41px;
+  }
+  & >li a {
+    line-height:3.4;
+    color: #f0f0f0;
+    padding: 13px 21px 10px;
+  }
+}
+
+
+#topNewsList {
+  float: right;
+  margin: 7px 0 0;
+  letter-spacing: 0.3px;
+  padding: 5px 0 4px;
+  & > li a {
+    color: #f0f0f0;
+  }
+}
+
+#rightContent,#leftContent,#rightContentMain,#rightContentSub,#fInner, #fCorporate{
+  border: 1px solid #444;
+}
+  #body{
+
+  }
+  #rightContent{
+    float:right;
+    width: 795px;
+    height:100vh;
+    &Main{
+      float: left;
+      width:542px;
+      height:100vh;
+    }
+    &Sub{
+      float:right;
+      width:212px;
+      height:100vh;
+    }
+  }
+  #leftContent{
+    width: 175px;
+    height: 100vh;
+    float: left;
+    // margin-top: 60px;
+    border: 1px solid #444;
+  }
+
+
+#gblFooter {
+    overflow: hidden;
+    font-size: 12px;
+    text-align: left;
+    width: 100%;
+    margin: 70px auto 0;
+    padding: 0 0 50px 0;
+    background: #f0f0f0;
+}
+#f{
+  &Inner{
+  height:167px;
+  }
+  &Corporate{
+    text-align: left;
+    height:124px;
+    padding: 21px 0 12px;
+  }
+}
