@@ -52,3 +52,4 @@ production:
   database: zozo_23_production
   username: zozo_23
   password: <%= ENV['ZOZO_23_DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
