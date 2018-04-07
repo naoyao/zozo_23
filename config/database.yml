@@ -51,5 +51,5 @@ production:
   <<: *default
   database: zozo_23_production
   username: zozo_23
-  password: <%= ENV['ZOZO_23_DATABASE_PASSWORD'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
