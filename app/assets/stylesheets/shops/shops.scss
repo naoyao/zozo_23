@@ -77,6 +77,12 @@
 .couponBanner {
     color: #ffffff;
 }
+.couponBannerCaptionNames {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: normal;
+    white-space: nowrap;
+}
 .couponBannerValueNumber {
     display: inline-block;
     margin: -25px 0 -23px;
