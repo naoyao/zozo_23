@@ -1,0 +1,7 @@
+ja:
+  enums:
+    customer:
+      sexuality:
+        man: 男性
+        woman: 女性
+        other: その他

@@ -68,3 +68,5 @@ group :development, :test do
 end
 
 gem 'devise'
+
+gem 'enum_help'
