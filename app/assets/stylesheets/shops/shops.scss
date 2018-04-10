@@ -1,0 +1,365 @@
+// =====================================
+// shop ヘッダー
+// =====================================
+// ヘッダー　クーポン
+.couponBanner{
+  background:$sect-color-red1;
+  border: 1px solid  #444;
+  &Row{
+    display: table;
+    // margin-left: auto;
+    // margin-right: auto;
+    // // width: 980px;
+    height: 60px;
+    cursor: pointer;
+  }
+}
+.cpColor_H3 {
+    background-color: $sect-color-red1;
+}
+.couponBannerReminder {
+    width: 112px;
+    line-height: 1;
+}
+.couponBannerCol {
+    display: table-cell;
+    vertical-align: middle;
+}
+.couponBannerReminderGroup.active {
+    display: block;
+}
+.couponBannerReminderGroup {
+    display: none;
+    margin: -26px 0 -26px;
+    border-radius: 56px;
+    padding: 32px 15px;
+    width: 112px;
+    height: 112px;
+    background: #ffffff;
+}
+.couponBannerReminderLabel {
+    border-radius: 2px;
+    padding: 3px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+}
+.couponBannerCounter .couponBannerReminderContent {
+    margin-top: 1px;
+}
+.couponBannerReminderContent {
+    text-align: center;
+}
+.couponBannerReminderContent > span {
+    color: $sect-color-red1;
+}
+.couponBannerCounterUnit {
+    margin-left: -2px;
+}
+.couponBannerCounterNumber {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+}
+.couponBannerCounterLead {
+    width: 1em;
+}
+.couponBannerCounterLead, .couponBannerCounterUnit {
+    font-weight: bold;
+    font-size: 12px;
+}
+.couponBannerCol + .couponBannerCol {
+    padding-left: 10px;
+}
+.couponBannerValue {
+    width: 1%;
+}
+.couponBanner {
+    color: #ffffff;
+}
+.couponBannerValueNumber {
+    display: inline-block;
+    margin: -25px 0 -23px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: -0.020833333em;
+    vertical-align: middle;
+}
+.couponBannerCaption {
+    font-size: 13px;
+    line-height: 1.384615385;
+}
+.couponBannerAction {
+    width: 320px;
+}
+.couponBannerActionRow {
+    display: table;
+}
+.couponBannerActionDetail {
+    width: 110px;
+}
+.couponBannerActionCol {
+    display: table-cell;
+    vertical-align: middle;
+}
+.couponBannerActionBtn {
+    display: block;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    padding: 8px 5px;
+    min-height: 35px;
+    font-size: 12px;
+    line-height: 1.416666667;
+    text-align: center;
+}
+.couponBannerActionSearch {
+    width: 200px;
+}
+.couponBannerActionBtnPrimary {
+    background: #ffffff;
+}
+.couponBannerActionCol + .couponBannerActionCol {
+    padding-left: 10px;
+}
+.couponBannerActionBtnPrimary, .couponBannerActionBtnPrimary:link, .couponBannerActionBtnPrimary:visited, .couponBannerActionBtnPrimary:hover, .couponBannerActionBtnPrimary:active {
+    color: #2d2d2d;
+    text-decoration: none;
+}
+.couponBannerValue, .couponBannerCaption, .couponBannerAction {
+    padding-top: 1px;
+}
+// ヘッダー　ZOZOTOWN
+#gblHeaderStuck{
+  #gblHeader {
+    // z-index: 55;
+    // position: relative;
+    width: 100%;
+    height: 51px;
+    line-height: 1.6363;
+    text-align: left;
+    // background: $sect-color-wfff;
+  }
+}
+
+// ナビゲーションを途中から固定
+.is-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 55;
+  width: 100%;
+}
+// ナビゲーションを途中から固定 end
+
+#h{
+  &Wrapper {
+    width: 100%;
+    background: $sect-color-bk1;
+  }
+  &WrapperInner {
+      // width: 980px;
+      // margin: 0 auto;
+      height: 51px;
+  }
+  &Logo {
+      float: left;
+      margin: 1px 18px 0 0;
+  }
+  &Logo>a {
+    color:$sect-color-w;
+    font-size: 28px;
+    font-weight:bold;
+    width: 151px;
+    // padding: 26px 0 0;
+    // height: 0;
+    // display: block;
+    // overflow: hidden;
+    line-height: 1.5;
+  }
+}
+
+// ヘッダー検索
+#h{
+  &ItemSearch {
+    margin-top: 5px;
+    float: left;
+  }
+  &ItemSearch > form {
+    float: left;
+    margin: 0 12px 0 0;
+  }
+  &Keyword {
+    margin: 0 -2px 0 0;
+    float: left;
+  }
+  &Submit {
+    margin: 0 0 0 0;
+    width: 27px;
+    height: 27px;
+    zoom: 1;
+    float: left;
+  }
+}
+
+#gblHeader,.hBtn {
+    color: $sect-color-w;
+    text-align: center;
+    border-radius: 0 2px 2px 0;
+    background: #dcdcdc;
+    cursor: pointer;
+    // position: relative;
+}
+.def {
+    color: #8c8c8c;
+}
+input[type="text"] {
+    border: 1px solid #c8c8c8;
+    border-radius: 2px;
+    padding: 2px 7px;
+      // margin-top: 5px;
+}
+.searchQuery{
+  margin-top: 5px;
+}
+
+// ヘッダーアイコン
+#h{
+  &Ctrl {
+    float: right;
+    line-height: 1.615384615;
+    position: relative;
+    z-index: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  &Submit{
+    margin-top: 5px;
+    height: 26px;
+    width: 25px;
+    cursor: pointer;
+    text-align: center;
+    background: #dcdcdc;
+  }
+  &Name {
+    padding: 16px 26px 14px;
+    display: inline-block;
+    color: $sect-color-w;
+  }
+  &CtrlList > li#hUserName {
+    width: auto;
+  }
+  &CtrlList > li {
+    float: left;
+    // position: relative;
+    width: 54px;
+    // background: #323232;
+  }
+  &CtrlList > li .ico {
+    color: $sect-color-w;
+    width: 54px;
+    display: inline-block;
+    text-align: left;
+  }
+  &CtrlList > li .ico_favorite {
+    // background-position: 17px -70px;
+    margin-top: 10px;
+  }
+}
+.fas,.fa{
+  font-size: 32px;
+}
+
+// =====================================
+// shop メイン
+// =====================================
+// #contentHeader{
+//   border: 1px solid  #444;
+// }
+// #mainTab >li a{
+//   border: 1px solid  $sect-color-g1;
+// }
+
+#contentHeader {
+  width: 100%;
+  background: #f0f0f0;
+}
+#mainTab{
+  float: left;
+ &> li{
+    float: left;
+    // height: 41px;
+  }
+  & >li a {
+    line-height:3.4;
+    color:$sect-color-g1;
+    padding: 13px 21px 10px;
+  }
+}
+#topNewsList {
+  float: right;
+  margin: 7px 0 0;
+  letter-spacing: 0.3px;
+  padding: 5px 0 4px;
+  & > li a {
+    color:$sect-color-g1;
+  }
+}
+
+// =====================================
+// shop メインコンテンツ
+// =====================================
+#rightContent,#leftContent,#rightContentMain,#rightContentSub,#fInner, #fCorporate{
+    border: 1px solid #444;
+}
+
+#rightContent{
+  float:right;
+  width: 795px;
+  height:100vh;
+  &Main{
+    float: left;
+    width:542px;
+    height:100vh;
+  }
+  &Sub{
+    float:right;
+    width:212px;
+    height:100vh;
+  }
+}
+#leftContent{
+  width: 175px;
+  height: 100vh;
+  float: left;
+  // margin-top: 60px;
+  border: 1px solid #444;
+}
+
+
+
+
+
+
+// =====================================
+// shop footer
+// =====================================
+#gblFooter {
+    overflow: hidden;
+    font-size: 12px;
+    text-align: left;
+    width: 100%;
+    margin: 70px auto 0;
+    padding: 0 0 50px 0;
+    background: #f0f0f0;
+}
+#f{
+  &Inner{
+  height:167px;
+  }
+  &Corporate{
+    text-align: left;
+    height:124px;
+    padding: 21px 0 12px;
+  }
+}
