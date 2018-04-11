@@ -1,3 +1,4 @@
+
 .wrapper
   -# shops_indexのヘッダー
   = render "common/header"
@@ -12,6 +13,7 @@
         %li#tabMEN
           %a メンズ
         %li#tabWOMEN
+
           %a レディース　
         %li#tabKIDS
           %a キッズ
@@ -20,14 +22,12 @@
           %li
             %a ZOZOTOWNからのお知らせ
 
-    -# メインコンテンツ
   #body
     %article.cf.inner
       #rightContent.cf
-        #rightContentMain
-        #rightContentSub
-      #leftContent
-    #gblFooter
-      #fwrapper.inner
-        #fInner
-        #fCorporate
+        = render 'common/rightcontent'
+      #leftContent.aSide
+        = render 'leftcontent'
+    #gblFooter.footer
+      = render 'common/footer'
+

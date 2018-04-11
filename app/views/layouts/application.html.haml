@@ -2,9 +2,12 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Expert23Zozo
+
+    %link{href: "https://use.fontawesome.com/releases/v5.0.6/css/all.css", rel: "stylesheet"}/
+    %title Zozo23
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  %body#zozotown
+  %body
+
     = yield

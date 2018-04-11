@@ -1,30 +1,26 @@
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
 @import "./reset";
-@import "./base";
-@import "font-awesome";
-@import "./mixin_to/config/config";
-@import "./mixin_to/mixin/mixin";
+@import "./config/config";
 @import "./top/top";
+@import "./base";
+@import "./top/aside_leftcontent";
+@import "./top/rightcontent";
 @import "./common/common_header";
+@import "./common/common_footer";
+@import "font-awesome";
 
-
-// configフォルダ
-// configフォルダは、プロジェクトの設定ファイルや、scssで使用する変数を定義するファイルなどを管理するフォルダです。
-//
-// mixinフォルダ
-// mixinフォルダは、scss内で使用するmixinファイルを管理するフォルダです。
-//
-// modulesフォルダ
-// modulesフォルダはモジュールを管理するためのフォルダです。
-// モジュールとは、いくつかの要素をまとめた部品の集合という意味です。
-// ヘッダー、フッターのような用途ごとに分けることができます。
-// モジュールを使うことでまとまったCSSを独立したものとして管理することができます。
-//
-// vendorフォルダ
-// vendorフォルダは、ライブラリのファイルを管理するフォルダです。
-// cssにはライブラリと呼ばれるものがあります。
-// ライブラリとはあらかじめCSSが書かれたファイルです。
-// 有名なCSSのライブラリでは、bootstrapがあげられます。
-// ライブラリを効率よく利用することで、コーディングのスピードが格段に上がります。
-//
-// overrideフォルダ
-// overrideフォルダは、vendorフォルダに格納してある外部のライブラリを上書きするためのscssファイルを管理するフォルダです。
