@@ -1,0 +1,199 @@
+#rightContentSub{
+  border: 1px solid #444;
+}
+
+#body {
+}
+
+#rightContent {
+  float:right;
+  width: 785px;
+  height:100vh;
+  h2{
+    font-size: 18px;
+  }
+  &Main {
+    float: left;
+    width: 550px;
+    height: 100vh;
+    margin-left: 15px;
+    #idxCouponItem{
+      border-bottom: solid 1px #ebebeb;
+      padding: 22px 0 25px;
+      p.more {
+        text-align: right;
+        font-size: 13px;
+        line-height: 1;
+        a:hover {
+         text-decoration: underline;
+        }
+      }
+      #couponItem {
+        min-height: 485px;
+        width: 542px;
+        margin: 11px 0 0 3px;
+        ul.rankingList{
+          margin-left: -14px;
+          li{
+              margin: 0 0 0 14px;
+              float: left;
+              width: 125px;
+              height: 215px;
+            &.rank1, &.rank2, &.rank3{
+              width: 171px;
+              height: 270px;
+            }
+            // &.rank4, &.rank5, &.rank6, &.ramk7{
+              // display: inline-block;
+              // width: 123.5px;
+              // height: 215px;
+            // }
+            .photo{
+              position: relative;
+            }
+            .feed-tag-group{
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              line-height: 1;
+              text-align: left;
+              .feed-tag{
+                background: rgba(43, 136, 188, 0.9);
+                color: #FFF;
+                display: inline-block;
+                overflow: hidden;
+                padding: 0 5px;
+                max-width: 100%;
+                font-size: 11px;
+                line-height: 20px;
+                text-overflow: ellipsis;
+                word-wrap: normal;
+                white-space: nowrap;
+                vertical-align: middle;
+              }
+            }
+            p.label {
+              margin: 5px 0 0;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              color: #6f6f6f;
+            }
+            p.price {
+              line-height: 1.1;
+              margin: 3px 0 0;
+            }
+            .tax {
+              font-size: 10px;
+              margin: 0 0 0 2px;
+              white-space: nowrap;
+              vertical-align: 1px;
+              color: #808080;
+            }
+          }
+        }
+      }
+    }
+    #idxRankingItem {
+      padding: 23px 0 25px;
+      border-bottom: solid 1px #ebebeb;
+      #rankingHeader{
+        position: relative;
+      }
+      #rankingItem{
+        min-height: 270px;
+        width: 539px;
+        margin: 11px 0 0 3px;
+        ul.rankingList {
+          margin: 0 0 0 -17px;
+          li{
+            float: left;
+            width: 125px;
+            margin: 0 0 0 14px;
+            height: 215px;
+            &.rank1, &.rank2, &.rank3{
+              width: 171px;
+              height: 270px;
+            }
+            .listInner{
+              overflow: hidden;
+              position: relative;
+              .label {
+                margin: 5px 0 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                color: #6f6f6f;
+              }
+              .price {
+                line-height: 1.1;
+                margin: 3px 0 0;
+                .discount{
+                  color: #E73656 !important;
+                  .off{
+                    margin: 0 0 0 2px;
+                    font-size: 10px;
+                  }
+                }
+              }
+              .tax {
+                font-size: 10px;
+                margin: 0 0 0 2px;
+                white-space: nowrap;
+                vertical-align: 1px;
+                color: #808080;
+              }
+              .rank{
+                position: absolute;
+                z-index: 1;
+                top: 4px;
+                left: 4px;
+                .iconSet{
+                  position: relative;
+                  border: 1px solid #dedede;
+                  display: inline-block;
+                  z-index: 5;
+                  margin: 0 5px 0 0;
+                  background: #fff;
+                  border-radius: 50%;
+                  border: 1px solid #e6e6e6;
+                  color: #8C8C8C;
+                  font-size: 15px;
+                  font-family: helvetica;
+                  height: 28px;
+                  line-height: 30px;
+                  padding: 0;
+                  text-align: center;
+                  width: 28px;
+                  zoom: 1;
+                  z-index: 5;
+                  &.iconSet1{
+                    background: #d9b340;
+                    border-color: #d9b340;
+                    color: #ffffff;
+                  }
+                  &.iconSet2{
+                    background: #6f7b83;
+                    border-color: #6f7b83;
+                    color: #ffffff;
+                  }
+                  &.iconSet3{
+                    background: #a15326;
+                    border-color: #a15326;
+                    color: #ffffff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &Sub {
+    float:right;
+    width:212px;
+    height:100vh;
+  }
+}
