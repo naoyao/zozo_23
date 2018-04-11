@@ -238,6 +238,9 @@ input[type="text"] {
     z-index: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    .fas,.fa{
+      font-size: 32px;
+    }
   }
   &Submit{
     margin-top: 5px;
@@ -271,7 +274,4 @@ input[type="text"] {
     // background-position: 17px -70px;
     margin-top: 10px;
   }
-}
-.fas,.fa{
-  font-size: 32px;
 }

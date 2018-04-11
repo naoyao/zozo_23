@@ -6,10 +6,10 @@
 // top メイン
 // =====================================
 #contentHeader {
-  border: 1px solid  #444;
+  // border: 1px solid  #444;
 }
 #mainTab >li a {
-  border: 1px solid #f0f0f0;
+  // border: 1px solid #f0f0f0;
 }
 
 #contentHeader {
@@ -46,9 +46,9 @@
 // =====================================
 // shop メインコンテンツ
 // =====================================
-#rightContent,#leftContent,#rightContentMain,#rightContentSub,#fInner, #fCorporate{
-    border: 1px solid #444;
-}
+// #rightContent,#leftContent,#rightContentMain,#rightContentSub,#fInner, #fCorporate{
+//     border: 1px solid #444;
+// }
 
 #rightContent{
   float:right;
@@ -70,7 +70,7 @@
   height: 100vh;
   float: left;
   // margin-top: 60px;
-  border: 1px solid #444;
+  // border: 1px solid #444;
 }
 
 
@@ -100,9 +100,3 @@
     padding: 21px 0 12px;
   }
 }
-
-    color: #f0f0f0;
-  }
-}
-
-
