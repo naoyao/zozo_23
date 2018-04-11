@@ -15,9 +15,9 @@
  */
 @import "./reset";
 @import "./config/config";
-@import "./top";
+@import "./top/top";
 @import "./base";
-@import "./modules/aside_leftcontent";
-@import "./modules/rightcontent";
+@import "./top/aside_leftcontent";
+@import "./top/rightcontent";
 @import "./common/common_header";
 @import "./common/common_footer";
