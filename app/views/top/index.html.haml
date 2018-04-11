@@ -1,6 +1,10 @@
-#warraper
-  #couponBanner
-  #gblHeaderStuck
+
+.wrapper
+  -# shops_indexのヘッダー
+  = render "common/header"
+
+  -# メイン ----------------------
+  -# メインヘッダー
   #contentHeader
     #headerInner.inner.cf
       %ul#mainTab.cf
@@ -9,13 +13,15 @@
         %li#tabMEN
           %a メンズ
         %li#tabWOMEN
-          %a レディース
+
+          %a レディース　
         %li#tabKIDS
           %a キッズ
       #topNewsList.cf
         %ul
           %li
             %a ZOZOTOWNからのお知らせ
+
   #body
     %article.cf.inner
       #rightContent.cf

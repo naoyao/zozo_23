@@ -1,3 +1,4 @@
+
 // Place all the styles related to the top controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
@@ -38,11 +39,70 @@
   letter-spacing: 0.3px;
   padding: 5px 0 4px;
   & > li a {
-    color: #f0f0f0;
+    color:$sect-color-g1;
   }
+}
+
+// =====================================
+// shop メインコンテンツ
+// =====================================
+#rightContent,#leftContent,#rightContentMain,#rightContentSub,#fInner, #fCorporate{
+    border: 1px solid #444;
+}
+
+#rightContent{
+  float:right;
+  width: 795px;
+  height:100vh;
+  &Main{
+    float: left;
+    width:542px;
+    height:100vh;
+  }
+  &Sub{
+    float:right;
+    width:212px;
+    height:100vh;
+  }
+}
+#leftContent{
+  width: 175px;
+  height: 100vh;
+  float: left;
+  // margin-top: 60px;
+  border: 1px solid #444;
 }
 
 
 
+
+
+
+// =====================================
+// shop footer
+// =====================================
+#gblFooter {
+    overflow: hidden;
+    font-size: 12px;
+    text-align: left;
+    width: 100%;
+    margin: 70px auto 0;
+    padding: 0 0 50px 0;
+    background: #f0f0f0;
+}
+#f{
+  &Inner{
+  height:167px;
+  }
+  &Corporate{
+    text-align: left;
+    height:124px;
+    padding: 21px 0 12px;
+  }
+}
+
+    color: #f0f0f0;
+  }
+}
 
 

@@ -1,0 +1,72 @@
+-# commonクーポンのヘッダー
+.couponBanner.cpColor_C3.coupon10508#couponBanner
+  .couponBannerRow.loaded.inner
+    .couponBannerCol.couponBannerReminder
+
+      .couponBannerReminderGroup.couponBannerCounter.cpText_H3.active
+        .couponBannerReminderLabel.cpColor_H3 本日限定
+        .couponBannerReminderContent
+          %span.couponBannerCounterLead あと
+          %span.couponBannerCounterNumber 7
+          %span.couponBannerCounterUnit 時間
+
+    .couponBannerCol.couponBannerValue
+      %span.couponBannerValueNumber ¥2,000
+    .couponBannerCol.couponBannerCaption
+      .couponBannerCaptionNames N.（N. Natural Beauty Basic）, WHO'S WHO gallery, NOLLEY'S, aquagirl
+      .couponBannerCaptionDescription 全78ショップで使えるクーポンをもれなく全員に発行！
+
+    .couponBannerCol.couponBannerAction
+      .couponBannerActionRow
+        .couponBannerActionCol.couponBannerActionDetail
+          %span.couponBannerActionBtn.couponBannerActionBtnSecondary クーポン詳細
+
+        .couponBannerActionCol.couponBannerActionSearch
+          %a.couponBannerActionBtn.couponBannerActionBtnPrimary 対象商品はこちら
+
+-# common 黒いヘッダー
+#gblHeaderStuck
+  #gblHeader
+    #hWrapper
+      #hWrapperInner.inner
+        #header.cf
+          #hHeader
+            %h1#hLogo
+              =link_to "ZOZOTOWN"
+            -# ヘッダー検索
+            #hItemSearch.cf
+              .blogSideBox.bdr.cf
+                = form_tag do
+                  %p#hKeyword
+                    %input.searchQuery{:name => "keyword", :placeholder => "何かお探しですか？", :type => "text", :value => ""}/
+                  %p#hSubmit
+                    %form.js-search-submit{"accept-charset" => "utf-8", :action => "/", :method => "get"}
+            -# # ヘッダー検索　＠end
+            -# ヘッダーアイコン
+          #hCtrl
+            #hUserName.hPopWrap.static
+              %ul#hCtrlList.cf
+                %li#hUserName
+                  %p#hThumbs
+                    %span#hName
+                      %span.userName.textTruncate na0418 様
+
+                %li#hNotice.hPopWrap.static
+                  %a
+                    %span.ico.ico_notice
+                      %i.fas.fa-address-book
+
+                %li.hFavoriteLink.static.hPopWrap
+                  %a
+                    %span#hFavorite.ico.ico_favorite
+                      %i.fa.fa-heart
+
+                %li.hFavoriteLink.static.hPopWrap
+                  %a
+                    %span#hFavorite.ico.ico_favorite
+                      %i.fa.fa-shopping-cart
+
+                %li.hFavoriteLink.static.hPopWrap
+                  %a
+                    %span#hFavorite.ico.ico_favorite
+                      %i.fa.fa-bars
