@@ -3,7 +3,7 @@
 // =====================================
 // ヘッダー　クーポン
 .couponBanner{
-  background:$sect-color-red1;
+  background:#8c1c33;
   border: 1px solid  #444;
   &Row{
     display: table;
@@ -15,7 +15,7 @@
   }
 }
 .cpColor_H3 {
-    background-color: $sect-color-red1;
+    background-color: #8c1c33;
 }
 .couponBannerReminder {
     width: 112px;
@@ -52,7 +52,7 @@
     text-align: center;
 }
 .couponBannerReminderContent > span {
-    color: $sect-color-red1;
+    color: #8c1c33;
 }
 .couponBannerCounterUnit {
     margin-left: -2px;
@@ -161,7 +161,7 @@
 #h{
   &Wrapper {
     width: 100%;
-    background: $sect-color-bk1;
+    background: #323232;
   }
   &WrapperInner {
       // width: 980px;
@@ -173,7 +173,7 @@
       margin: 1px 18px 0 0;
   }
   &Logo>a {
-    color:$sect-color-w;
+    color:#fff;
     font-size: 28px;
     font-weight:bold;
     width: 151px;
@@ -209,7 +209,7 @@
 }
 
 #gblHeader,.hBtn {
-    color: $sect-color-w;
+    color: #fff;
     text-align: center;
     border-radius: 0 2px 2px 0;
     background: #dcdcdc;
@@ -253,7 +253,7 @@ input[type="text"] {
   &Name {
     padding: 16px 26px 14px;
     display: inline-block;
-    color: $sect-color-w;
+    color: #fff;
   }
   &CtrlList > li#hUserName {
     width: auto;
@@ -265,7 +265,7 @@ input[type="text"] {
     // background: #323232;
   }
   &CtrlList > li .ico {
-    color: $sect-color-w;
+    color: #fff;
     width: 54px;
     display: inline-block;
     text-align: left;

@@ -1,7 +1,7 @@
 
 .wrapper
   -# shops_indexのヘッダー
-  = render "common/header"
+
 
   -# メイン ----------------------
   -# メインヘッダー
@@ -14,7 +14,7 @@
           %a メンズ
         %li#tabWOMEN
 
-          %a レディース　
+          %a レディース
         %li#tabKIDS
           %a キッズ
       #topNewsList.cf
@@ -25,8 +25,7 @@
   #body
     %article.cf.inner
       #rightContent.cf
-        -# = render 'common/rightcontent'
+
+        = render 'rightcontent'
       #leftContent.aSide
         = render 'leftcontent'
-    #gblFooter.footer
-      = render 'common/footer'
