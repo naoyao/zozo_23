@@ -1,0 +1,57 @@
+%h2 基本情報
+= form_for(current_customer, url: "/customers/#{current_customer.id}/confirm/default", method: 'PATCH') do |f|
+  %table
+    %tr
+      %th お名前
+      %td
+        = f.text_field :last_name
+        = f.text_field :first_name
+    %tr
+      %th お名前（カナ）
+      %td
+        = f.text_field :last_name_kana
+        = f.text_field :first_name_kana
+    %tr
+      %th 性別
+      %td
+        %label
+          = f.radio_button :sexuality, :man
+          男性
+        %label
+          = f.radio_button :sexuality, :woman
+          女性
+        %label
+          = f.radio_button :sexuality, :other
+          その他
+    %tr
+      %th 生年月日
+      %td
+        = f.date_select(:birthday,
+              start_year: 1910,
+              end_year: 2018,
+              use_month_numbers: true,
+              default: Date.new(1990,1,1))
+    %tr
+      %th 郵便番号
+      %td
+        = f.text_field :postal_code
+    %tr
+      %th 都道府県
+      %td
+        = f.text_field :prefecture
+    %tr
+      %th 住所１
+      %td
+        = f.text_field :address_1
+    %tr
+      %th 住所２
+      %td
+        = f.text_field :address_2
+    %tr
+      %th 電話番号
+      %td
+        = f.text_field :phone_num_1
+        = f.text_field :phone_num_2
+        = f.text_field :phone_num_3
+  .actions
+    = f.submit "確認する"

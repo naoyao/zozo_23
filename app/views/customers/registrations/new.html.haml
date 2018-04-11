@@ -6,13 +6,13 @@
       %th 性別
       %td
         %label
-          = f.radio_button :sexuality, "1"
+          = f.radio_button :sexuality, :man
           男性
         %label
-          = f.radio_button :sexuality, "2"
+          = f.radio_button :sexuality, :woman
           女性
         %label
-          = f.radio_button :sexuality, "99"
+          = f.radio_button :sexuality, :other
           その他
     %tr
       %th 生年月日

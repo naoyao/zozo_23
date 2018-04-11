@@ -1,0 +1,54 @@
+%h2 入力内容の確認
+= form_for(current_customer, url: "/customers/#{current_customer.id}/edit/default", method: 'PATCH') do |f|
+  %table
+    %tr
+      %th お名前
+      %td
+        = current_customer.last_name
+        = current_customer.first_name
+        = f.hidden_field :last_name
+        = f.hidden_field :first_name
+    %tr
+      %th お名前（カナ）
+      %td
+        = current_customer.last_name_kana
+        = current_customer.first_name_kana
+        = f.hidden_field :last_name_kana
+        = f.hidden_field :first_name_kana
+    %tr
+      %th 性別
+      %td
+        = current_customer.sexuality_i18n
+        = f.hidden_field :sexuality
+    %tr
+      %th 生年月日
+      %td
+        = current_customer.birthday.strftime("%Y年 %m月 %d日")
+    %tr
+      %th 郵便番号
+      %td
+        = current_customer.postal_code
+        = f.hidden_field :postal_code
+    %tr
+      %th 都道府県
+      %td
+        = current_customer.prefecture
+        = f.hidden_field :prefecture
+    %tr
+      %th 住所
+      %td
+        = current_customer.address_1
+        = current_customer.address_2
+        = f.hidden_field :address_1
+        = f.hidden_field :address_2
+    %tr
+      %th 電話番号
+      %td
+        = current_customer.phone_num_1
+        = current_customer.phone_num_2
+        = current_customer.phone_num_3
+        = f.hidden_field :phone_num_1
+        = f.hidden_field :phone_num_2
+        = f.hidden_field :phone_num_3
+  .actions
+    = f.submit "変更する"
