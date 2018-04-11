@@ -15,14 +15,13 @@
       #topNewsList.cf
         %ul
           %li
-            %a ZOZOTOWNからのお知らせ｀｀｀
+            %a ZOZOTOWNからのお知らせ
   #body
     %article.cf.inner
       #rightContent.cf
-        #rightContentMain
-        #rightContentSub
-      #leftContent
-    #gblFooter
-      #fwrapper.inner
-        #fInner
-        #fCorporate
+        = render 'shared/rightcontent'
+      #leftContent.aSide
+        = render 'shared/leftcontent'
+    #gblFooter.footer
+      = render 'shared/footer'
+

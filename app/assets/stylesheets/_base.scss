@@ -32,7 +32,7 @@ a:hover {
   color: #888; }
 
 p {
-  margin-bottom: 5px;
+  // margin-bottom: 5px;
   // line-height: 1.5em;
  }
 //
@@ -45,9 +45,10 @@ p {
 //   color: #333; }
 
 .inner {
-  max-width: 90%;
+  // max-width: 90%;
   width: 980px;
-  margin: 0 auto; }
+  margin: 0 5px;
+}
 
 .cf::after {
   content: '';
