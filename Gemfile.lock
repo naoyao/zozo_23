@@ -198,7 +198,11 @@ GEM
     sprockets-rails (3.2.1)
       actionpack (>= 4.0)
       activesupport (>= 4.0)
+<<<<<<< HEAD
       sprockets (>= 3.0.0
+=======
+      sprockets (>= 3.0.0)
+>>>>>>> master
     sqlite3 (1.3.13)
     sshkit (1.16.0)
       net-scp (>= 1.1.2)
