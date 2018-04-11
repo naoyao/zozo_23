@@ -32,12 +32,13 @@
   }
 }
 
-
+//$sect-color-g1: #808080;
 #topNewsList {
   float: right;
   margin: 7px 0 0;
   letter-spacing: 0.3px;
   padding: 5px 0 4px;
+  color:$sect-color-g1;
   & > li a {
     color:$sect-color-g1;
   }
@@ -46,9 +47,6 @@
 // =====================================
 // shop メインコンテンツ
 // =====================================
-#rightContent,#leftContent,#rightContentMain,#rightContentSub,#fInner, #fCorporate{
-    border: 1px solid #444;
-}
 
 #rightContent{
   float:right;
@@ -101,8 +99,5 @@
   }
 }
 
-    color: #f0f0f0;
-  }
-}
 
 
