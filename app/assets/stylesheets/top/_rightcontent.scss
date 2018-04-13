@@ -1,60 +1,111 @@
 #body {
+  // height: 100vh;
+}
+
+.more {
+  text-align: right;
+  font-size: 13px;
+  line-height: 1;
+  a{
+    display: inline-block;
+  }
+}
+
+p.label {
+  margin: 5px 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: $sect-color-g6;
+}
+p.price {
+  line-height: 1.1;
+  margin: 3px 0 0;
+}
+
+.price.discount {
+  color: $sect-color-red2 !important;
+  .tax {
+    color: inherit;
+  }
+  .off {
+    display: block;
+    font-size: 10px;
+  }
+}
+
+.tax {
+  font-size: 10px;
+  margin: 0 0 0 2px;
+  white-space: nowrap;
+  vertical-align: 1px;
+  color: $sect-color-g1;
 }
 
 #rightContent {
   float:right;
-  width: 785px;
-  height:100vh;
-  h2{
-    font-size: 18px;
+  width: 795px;
+  a {
+     text-decoration: underline;
+     &:link {
+      color: $sect-color-bl1;
+      text-decoration: none;
+      }
+    &:visited {
+      color: $sect-color-bl1;
+      text-decoration: none;
+    }
+    &:hover {
+     text-decoration: underline;
+    }
+  }
+  .section{
+    display: block;
+    border-bottom: solid 1px $sect-color-g7;
+    padding: 22px 0 25px;
+    &:last-child {
+    border-bottom: none;
+}
+    .sectionHeader {
+      border-bottom: 0;
+    }
+    h2{
+      font-size: 18px;
+    }
   }
   &Main {
     float: left;
-    width: 550px;
-    height: 100vh;
+    width: 542px;
     margin-left: 15px;
-    #idxCouponItem{
-      border-bottom: solid 1px #ebebeb;
+    #idxCouponItem {
+      border-bottom: solid 1px $sect-color-g7;
       padding: 22px 0 25px;
-      p.more {
-        text-align: right;
-        font-size: 13px;
-        line-height: 1;
-        a:hover {
-         text-decoration: underline;
-        }
-      }
       #couponItem {
         min-height: 485px;
         width: 542px;
         margin: 11px 0 0 3px;
-        ul.rankingList{
+        ul.rankingList {
           margin-left: -14px;
-          li{
+          li {
               margin: 0 0 0 14px;
               float: left;
               width: 125px;
               height: 215px;
-            &.rank1, &.rank2, &.rank3{
+            &.rank1, &.rank2, &.rank3 {
               width: 171px;
               height: 270px;
             }
-            // &.rank4, &.rank5, &.rank6, &.ramk7{
-              // display: inline-block;
-              // width: 123.5px;
-              // height: 215px;
-            // }
-            .photo{
+            .photo {
               position: relative;
             }
-            .feed-tag-group{
+            .feed-tag-group {
               position: absolute;
               left: 0;
               right: 0;
               bottom: 0;
               line-height: 1;
               text-align: left;
-              .feed-tag{
+              .feed-tag {
                 background: rgba(43, 136, 188, 0.9);
                 color: #FFF;
                 display: inline-block;
@@ -69,50 +120,32 @@
                 vertical-align: middle;
               }
             }
-            p.label {
-              margin: 5px 0 0;
-              overflow: hidden;
-              text-overflow: ellipsis;
-              white-space: nowrap;
-              color: #6f6f6f;
-            }
-            p.price {
-              line-height: 1.1;
-              margin: 3px 0 0;
-            }
-            .tax {
-              font-size: 10px;
-              margin: 0 0 0 2px;
-              white-space: nowrap;
-              vertical-align: 1px;
-              color: #808080;
-            }
           }
         }
       }
     }
     #idxRankingItem {
       padding: 23px 0 25px;
-      border-bottom: solid 1px #ebebeb;
-      #rankingHeader{
+      border-bottom: solid 1px $sect-color-g7;
+      #rankingHeader {
         position: relative;
       }
-      #rankingItem{
+      #rankingItem {
         min-height: 270px;
         width: 539px;
         margin: 11px 0 0 3px;
         ul.rankingList {
           margin: 0 0 0 -17px;
-          li{
+          li {
             float: left;
             width: 125px;
             margin: 0 0 0 14px;
             height: 215px;
-            &.rank1, &.rank2, &.rank3{
+            &.rank1, &.rank2, &.rank3 {
               width: 171px;
               height: 270px;
             }
-            .listInner{
+            .listInner {
               overflow: hidden;
               position: relative;
               .label {
@@ -120,38 +153,30 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                color: #6f6f6f;
+                color: $sect-color-g6;
               }
               .price {
                 line-height: 1.1;
                 margin: 3px 0 0;
-                .discount{
-                  color: #E73656 !important;
+                .discount {
+                  color: $sect-color-red2 !important;
                   .off{
                     margin: 0 0 0 2px;
-                    font-size: 10px;
                   }
                 }
               }
-              .tax {
-                font-size: 10px;
-                margin: 0 0 0 2px;
-                white-space: nowrap;
-                vertical-align: 1px;
-                color: #808080;
-              }
-              .rank{
+              .rank {
                 position: absolute;
                 z-index: 1;
                 top: 4px;
                 left: 4px;
-                .iconSet{
+                .iconSet {
                   position: relative;
-                  border: 1px solid #dedede;
+                  border: 1px solid $sect-color-g7;
                   display: inline-block;
                   z-index: 5;
                   margin: 0 5px 0 0;
-                  background: #fff;
+                  background: $sect-color-w1;
                   border-radius: 50%;
                   border: 1px solid #e6e6e6;
                   color: #8C8C8C;
@@ -164,20 +189,20 @@
                   width: 28px;
                   zoom: 1;
                   z-index: 5;
-                  &.iconSet1{
-                    background: #d9b340;
-                    border-color: #d9b340;
-                    color: #ffffff;
+                  &.iconSet1 {
+                    background: $sect-color-ye1;
+                    border-color: $sect-color-ye1;
+                    color: $sect-color-w1;
                   }
-                  &.iconSet2{
-                    background: #6f7b83;
-                    border-color: #6f7b83;
-                    color: #ffffff;
+                  &.iconSet2 {
+                    background: $sect-color-g8;
+                    border-color: $sect-color-g8;
+                    color: $sect-color-w1;
                   }
-                  &.iconSet3{
-                    background: #a15326;
-                    border-color: #a15326;
-                    color: #ffffff;
+                  &.iconSet3 {
+                    background: $sect-color-br1;
+                    border-color: $sect-color-br1;
+                    color: $sect-color-w1;
                   }
                 }
               }
@@ -187,9 +212,582 @@
       }
     }
   }
+  #coordinate {
+    display: block;
+    border-bottom: solid 1px $sect-color-g7;
+    padding: 22px 0 25px;
+    span a {
+      font-size: 13px;
+      color: $sect-color-g1;
+      margin: 0 0 0 4px;
+      vertical-align: middle;
+    }
+    span, .ico_wear {
+      font-size: 13px;
+      span {
+        margin: 0 0 0 10px;
+        vertical-align: middle;
+      }
+    }
+    ul {
+      li {
+        display: inline-block;
+      }
+      .rankingBtn {
+      display: inline-block;
+      padding: 0 10px 0 0;
+      }
+      .coordinateBtn {
+        border-left: 1px solid $sect-color-g7;
+        padding: 0 0 0 10px;
+      }
+      a {
+        display: inline-block;
+        line-height: 1.417;
+      }
+    }
+    .sectionHeader {
+      border-bottom: 0;
+      font-size: 18px;
+    }
+    .wrapper {
+      margin: 10px 0 0;
+      min-height: 327px;
+      height: 680px;
+      position: relative;
+      .coordinatelist {
+        margin: 0 0 0 -3px;
+        position: relative;
+        .mainList {
+          margin: 0 0 16px 5px;
+          width: 176px;
+          float: left;
+          position: relative;
+          .visual {
+            position: relative;
+            height: 298px;
+            width: 176px;
+            overflow: hidden;
+            .mainImg a {
+              display: block;
+              position: relative;
+              width: 176px;
+              text-align: center;
+            }
+            .rank {
+              position: absolute;
+              z-index: 1;
+              top: 4px;
+              left: 4px;
+              .iconSet {
+                position: relative;
+                border: 1px solid $sect-color-g7;
+                display: inline-block;
+                margin: 0 5px 0 0;
+                background: $sect-color-w1;
+                border-radius: 50%;
+                border: 1px solid #e6e6e6;
+                color: #8C8C8C;
+                font-size: 15px;
+                font-family: helvetica;
+                height: 28px;
+                line-height: 30px;
+                padding: 0;
+                text-align: center;
+                width: 28px;
+                zoom: 1;
+                &.iconSet1 {
+                  background: $sect-color-ye1;
+                  border-color: $sect-color-ye1;
+                  color: $sect-color-w1;
+                }
+                &.iconSet2 {
+                  background: $sect-color-g8;
+                  border-color: $sect-color-g8;
+                  color: $sect-color-w1;
+                }
+                &.iconSet3 {
+                  background: $sect-color-br1;
+                  border-color: $sect-color-br1;
+                  color: $sect-color-w1;
+                }
+              }
+            }
+            .items {
+              width: 176px;
+              height: 43px;
+              position: relative;
+              background: #f5f4f0;
+              color: black;
+              .currentItem {
+                position: absolute;
+                bottom: 0;
+                .item {
+                  position: relative;
+                  height: 43px;
+                  border-left: solid 1px #ebeae8;
+                  border-right: solid 1px #ebeae8;
+                  dl {
+                    font-size: 12px;
+                    line-height: 1.5;
+                    height: 43px;
+                    text-decoration: none;
+                    width: 176px;
+                    dt {
+                      float: right;
+                      width: 131px;
+                      line-height: 1.2;
+                      padding: 6px 0 0;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      white-space: nowrap;
+                    }
+                    dd {
+                      float: right;
+                      width: 131px;
+                      font-size: 13px;
+                      color: #202020;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      white-space: nowrap;
+                    }
+                    dd.itemImg {
+                      float: none;
+                      width: 35px;
+                      padding: 0;
+                      background: $sect-color-w1;
+                    }
+                    dd {
+                      font-size: 13px;
+                      color: #202020;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      white-space: nowrap;
+                      span {
+                        font-size: 10px;
+                        vertical-align: 0;
+                        text-align: left;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .data {
+            font-size: 13px;
+            line-height: 1.5;
+            margin: 6px 0 0;
+            color: $sect-color-g1;
+            p {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              width: 170px;
+              a {
+                color: $sect-color-g1;
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+  #pickupItems {
+    .pickupList {
+      min-height:99px;
+      ul {
+        li {
+          float: left;
+          margin: 11px 0 0 8px;
+          width: 69px;
+          .price {
+            font-size: 11px;
+            margin: 4px 0 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            .discount {
+              color: $sect-color-red2 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  #pickupShops {
+    .pickupList {
+      min-height: 86px;
+      ul {
+        margin: 0 0 0 -8px;
+        li {
+          float: left;
+          margin: 13px 0 0 8px;
+          width: 70px;
+        }
+      }
+    }
+  }
+  #about {
+    .txt {
+      margin: 10px 0 0 0;
+      p {
+        color: $sect-color-g1;
+      }
+      ul {
+        margin: 11px 0 0 0;
+        li {
+          float: left;
+          border-right: 1px solid #dcdcdc;
+          padding: 0 9px 0 0;
+          margin: 4px 10px 0 0;
+          line-height: 1;
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+
   &Sub {
     float:right;
     width:212px;
-    height:100vh;
+    .more {
+    margin-top: 20px;
+    }
+    #sideBanner {
+      .sideBannerItem{
+        margin: 15px 0 0 0;
+        a {
+          display: block;
+          position: relative;
+          overflow: hidden;
+          img {
+            width: 100%;
+          }
+        }
+        &:first-child {
+          margin: 27px 0 0 0;
+        }
+        &:last-child {
+          padding: 0 0 15px 0;
+        }
+      }
+    }
+    #sideTopicsList {
+      margin-top: 22px;
+      padding-bottom: 26px;
+      word-wrap: break-word;
+      .sidenavHeader {
+        display: table;
+        width: 100%;
+        h2 {
+          white-space: nowrap;
+          display: table-cell;
+          vertical-align: baseline;
+          line-height: 1.6;
+        }
+      }
+      .sidenavBody {
+        margin-top: 10px;
+        .feedMedia {
+          vertical-align: top;
+          border: solid 1px $sect-color-g7;
+          border-width: 1px 0;
+          box-sizing: border-box;
+          word-wrap: break-word;
+          padding-bottom: 12px;
+          .feedLink {
+            padding-top: 12px;
+            display: table;
+            table-layout: fixed;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            color: $sect-color-g1;
+            text-decoration: none;
+            box-sizing: border-box;
+            .feedBadge {
+              font-family: helvetica, sans-serif;
+              text-align: center;
+              position: absolute;
+              left: -9px;
+              top: 6px;
+              width: 22px;
+              height: 22px;
+              font-size: 11px;
+              line-height: 21px;
+              z-index: 1;
+              border: 1px solid $sect-color-g7;
+              border-radius: 50%;
+              background: $sect-color-w1;
+              &.iconPickup {
+                border-color: white;
+              }
+              &.badgeRank1 {
+                border-color: $sect-color-ye1;
+                background-color: $sect-color-ye1;
+                color: $sect-color-w1;
+              }
+              &.badgeRank2 {
+                border-color: $sect-color-g8;
+                background-color: $sect-color-g8;
+                color: $sect-color-w1;
+              }
+              &.badgeRank3 {
+                border-color: $sect-color-br1;
+                background-color: $sect-color-br1;
+                color: $sect-color-w1;
+              }
+            }
+          }
+          .feedFigure {
+            text-align: center;
+            width: 68px;
+            min-width: 68px;
+            display: table-cell;
+            vertical-align: top;
+            img {
+              max-width: 100%;
+              height: auto;
+              max-height: 82px;
+            }
+          }
+          .feedContent {
+            display: table-cell;
+            vertical-align: top;
+            width: 100%;
+            padding-left: 10px;
+            .feedMeta {
+              font-size: 11px;
+              line-height: 1.363636364;
+              margin-left: -3px;
+              &Item {
+                margin-left: 3px;
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              }
+            }
+            .feedH {
+              font-size: 12px;
+              line-height: 1.333333333;
+              margin-top: 4px;
+            }
+          }
+        }
+      }
+      .sidenavMore {
+        text-align: right;
+        margin-top: 15px;
+      }
+    }
+    #sideFashionNewsList {
+      margin-top: 22px;
+      padding-bottom: 26px;
+      word-wrap: break-word;
+      .sidenavHeader {
+        display: table;
+        width: 100%;
+      }
+      .sidenavBody {
+        margin-top: 10px;
+        .sidenavItem {
+          border: solid $sect-color-g7;
+          border-width: 1px 0;
+          .feedLink {
+            padding: 12px 0;
+            display: table;
+            table-layout: fixed;
+            position: relative;
+            width: 100%;
+            height: 68px;
+            color: $sect-color-g1;
+            text-decoration: none;
+            box-sizing: border-box;
+            .feedBadge {
+              font-family: helvetica, sans-serif;
+              text-align: center;
+              position: absolute;
+              left: -9px;
+              top: 6px;
+              width: 22px;
+              height: 22px;
+              font-size: 11px;
+              line-height: 21px;
+              border: 1px solid $sect-color-g7;
+              border-radius: 50%;
+              background: $sect-color-w1;
+              &.iconPickup {
+                width: 30px;
+                height: 30px;
+                background-image: url(PICKUP.png);
+                background-size: 110%;
+                left: -13px;
+                word-wrap: normal;
+                white-space: nowrap;
+              }
+              &.badgeRank1 {
+                border-color: $sect-color-ye1;
+                background-color: $sect-color-ye1;
+                color: $sect-color-w1;
+              }
+              &.badgeRank2 {
+                border-color: $sect-color-g8;
+                background-color: $sect-color-g8;
+                color: $sect-color-w1;
+              }
+              &.badgeRank3 {
+                border-color: $sect-color-br1;
+                background-color: $sect-color-br1;
+                color: $sect-color-w1;
+              }
+            }
+            .feedFigure {
+              min-width: 68px;
+              width: 68px;
+              text-align: center;
+              display: table-cell;
+              vertical-align: top;
+              .feedTumbnail {
+                height: 82px;
+                max-width: 100%;
+                height: auto;
+              }
+            }
+            .feedContent {
+              padding-left: 10px;
+              display: table-cell;
+              vertical-align: top;
+              width: 100%;
+              .feedH {
+                font-size: 12px;
+                line-height: 1.333333333;
+                margin-top: 4px;
+                display: block;
+                color: $sect-color-bk2;
+              }
+              .feedMeta {
+                margin: 4px 0 0 3px;
+                font-size: 10px;
+                line-height: 1.5;
+                &Item {
+                  display: block;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .sidenavMore {
+      margin-top: 15px;
+      text-align: right;
+    }
+    #sidePickUpLink{
+      padding: 0;
+      li {
+        border-bottom: solid 1px $sect-color-g7;
+        &:last-child {
+          border: none;
+        }
+        a {
+          display: block;
+          color: $sect-color-bk2;
+          .icon {
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            vertical-align: -26px;
+            &.ico_giftWrapping {
+              background-image: url(gift.jpg);
+              background-size: 45px;
+              margin: 3px 3px 13px 0;
+            }
+            &.ico_priceDown {
+              background-image: url(pricedown.jpg);
+              background-size: 45px;
+              margin: 10px 3px 8px 0;
+            }
+            &.ico_zozoused {
+              background-image: url(used.jpg);
+              background-size: 45px;
+              margin: 10px 3px 8px 0;
+            }
+            &.ico_zozocard {
+              background-image: url(zozocard.jpg);
+              background-size: 45px;
+              margin: 10px 3px 8px 0;
+            }
+            &.ico_disney {
+              background-image: url(disney.jpg);
+              background-size: 45px;
+              margin: 10px 3px 8px 0;
+            }
+          }
+          .txt{
+            line-height: 1.4;
+            vertical-align: middle;
+            display: inline-block;
+          }
+        }
+      }
+    }
+    #sideMenuMale {
+      .maleList {
+        border-bottom: 1px solid $sect-color-g7;
+        margin: 0 0 20px 0;
+        padding: 0 0 17px;
+        h3 {
+          display: block;
+          font-size: 14px;
+          color: black;
+          font-weight: bolder;
+          letter-spacing: 0.5px;
+          transform : scaleY(1.3);
+          &.logo_wear {
+            letter-spacing: 4px;
+          }
+        }
+        p.lead {
+          color: $sect-color-g1;
+          font-size: 12px;
+          margin: 9px 0 0 0;
+          word-break: break-all;
+        }
+        ul {
+          margin-top: 5px;
+          li {
+            float: left;
+            &.ios {
+              margin: 0 8px 0 0;
+            }
+          }
+        }
+      }
+    }
+    dl {
+      padding: 0 0 17px;
+      border-bottom: 1px solid $sect-color-g7;
+      margin: 0 0 20px;
+      dd {
+        margin: 9px 0 0;
+        font-size: 12px;
+        color: $sect-color-g1;
+        word-break: break-all;
+        .for_sns_ico p{
+          float: left;
+          margin-right: 13px;
+        }
+      }
+    }
+
   }
 }
+
