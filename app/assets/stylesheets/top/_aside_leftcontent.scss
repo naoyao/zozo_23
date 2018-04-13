@@ -1,9 +1,7 @@
 #leftContent {
   width: 175px;
   height: 3540px;
-  // height: 100vh;
   float: left;
-  // border: 1px solid #444;
   margin-top: 8px;
   h2 {
     font-size: 18px;
@@ -28,26 +26,22 @@
     text-decoration: underline;
   }
   a:visited {
-    color: #007ebe;
+    color: $sect-color-bl1;
     text-decoration: none;
   }
   .menuCategory .lists {
     margin-top: 17px;
-    border-top: #ebebeb 1px solid;
+    border-top: $sect-color-g7 1px solid;
   }
   .menuCategory .lists li {
     line-height: 1.4;
     margin: 0;
   }
   .menuCategory .lists li a {
-    border-bottom: solid 1px #f2f2f2;
+    border-bottom: solid 1px $sect-color-g7;
     padding: 10px 2px 8px 5px;
     display: block;
-    // background: url(/common_2015/img/ico/ico_arrow_4.png) no-repeat scroll 160px 14px;
   }
-  // #leftContent#menuShop.more #leftContent#menuBrand.more {
-  //   margin: 9px 0 0 0;
-  // }
   .more {
     padding-top: 18px;
     text-align: right;
@@ -67,35 +61,34 @@
   }
   .rankingList .iconSet {
     position: relative;
-    border: 1px solid #dedede;
+    border: 1px solid $sect-color-g7;
     display: inline-block;
     margin: 0 5px 0 0;
   }
   .rank .iconSet1 {
-    background: #d9b340;
-    border-color: #d9b340;
-    color: #fff;
+    background: $sect-color-ye1;
+    border-color: $sect-color-ye1;
+    color: $sect-color-w1;
   }
   .rank .iconSet2 {
-    background: #6f7b83;
-    border-color: #6f7b83;
-    color: #fff;
+    background: $sect-color-g8;
+    border-color: $sect-color-g8;
+    color: $sect-color-w1;
   }
   .rank .iconSet3 {
-    background: #a15326;
-    border-color: #a15326;
-    color: #fff;
+    background: $sect-color-br1;
+    border-color: $sect-color-br1;
+    color: $sect-color-w1;
     }
   .iconSet {
-    background: #fff;
+    background: $sect-color-w1;
     border-radius: 50%;
-    border: 1px solid #e6e6e6;
+    border: 1px solid $sect-color-g7;
     color: #8C8C8C;
     font-size: 15px;
     font-family: helvetica;
     height: 28px;
     line-height: 30px;
-    // padding: 0;
     text-align: center;
     width: 28px;
     zoom: 1;
@@ -111,7 +104,7 @@
     margin-bottom: 15px;
   }
   .bannerRecruit {
-    border-bottom: 1px solid #f2f2f2;
+    border-bottom: 1px solid $sect-color-g7;
   }
   .bannerRecriutLink {
     display: block;
@@ -119,16 +112,13 @@
     color: #333 !important;
   }
   .bannerRecruitItem {
-    border-top: 1px solid #f2f2f2;
+    border-top: 1px solid $sect-color-g7;
   }
   .bannerRecruitKind {
     font-size: 13px;
     line-height: 1.384615385;
     margin: 0;
   }
-  // .bannerRecruitKind:hover{
-  //   text-decoration: underline;
-  // }
   .bannerRecruitScope {
     font-size: 10px;
     color: #888;
