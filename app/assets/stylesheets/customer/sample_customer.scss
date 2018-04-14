@@ -1,0 +1,285 @@
+.registForm.section {
+    background:#f0f0f0;
+    border:1px solid #e6e6e6;
+    border-radius:4px;
+    margin:60px auto 0;
+    padding:0;
+    width:855px;
+    h3 {
+      padding:0 0 9px 0;
+    }
+    .sectionInner {
+      padding: 36px 49px 40px 49px;
+      border:none;
+    }
+  }
+
+.registForm tr th,
+.registForm tr td {
+  border-bottom:1px solid #DCDCDC;
+}
+.registForm tr td p.note {
+  color:#808080;
+  font-size:11px;
+}
+.registForm tr td select.err {
+  background:#ffedf5 ; 
+  border-color:#ffb0bd;
+}
+.sexTypeFrm label {
+  margin:0 25px 0 0; 
+}
+.registForm tr td.postFrm p.searchZip {
+  margin:12px 0 0 338px;
+}
+.registForm tr td.postFrm input,
+.registForm tr td.passFrm input,
+.registForm tr td.idFrm input {
+  float:left; width:225px;
+}
+.registForm tr td.mailFrm input {
+  width:307px;
+}
+.registForm tr td .sub {
+  margin:12px 0 0 0;
+}
+.registForm tr td.mailFrm .main input {
+    display:inline-block; 
+    float:left;
+}
+.registForm tr td.mailFrm p.note {
+  margin-top:10px;
+}
+.registForm .confTxt {
+  margin:20px 0 0 0; text-align:center;
+}
+.registForm .btn .gBtn {
+  margin-top:15px; width:237px;
+}
+#note.zozoid {
+  color:#808080;
+  font-size:10px;
+  margin:15px auto 0 auto; width:855px;
+}
+
+@charset "Shift_JIS";
+/*-------------------------------------
+SITE : http://zozo.jp/
+CREDIT : DESIGN BY START TODAY CO.,LTD.
+MODIFIED : 2017.03.29
+-------------------------------------*/
+
+/*-------------------------------------
+  override
+-------------------------------------*/
+
+input[type=text]:focus,[type=password]:focus { border-color:#36a2dc;}
+input[type="password"] { width:263px; }
+.hide { display:none; }
+#contentHeader { border:none; }
+#contentHeader h1 { padding:4px 0 0 47px; background-position:0 -560px; }
+.twoColumun #content { margin:28px 0 0 0; }
+.gBtnWhite { background:none; }
+.btnWrapper > form { display:inline; }
+.btnWrapper .btn { width:170px; margin:0 2px; }
+.btnWrapper .gBtnWhite { width:170px; }
+body .decorateForm label .checkbox { margin:0 10px 0 0; }
+.mac body .decorateForm label .checkbox {  vertical-align:top; }
+section.section .sectionInner .change .gBtn.btnSS { width:52px; margin:0; padding:2px 0 0 0; }
+a.blLink { color:#007ebe; }
+.err .centerLine { text-align:center; margin:25px 0 0 0; }
+.str { background: url("/common_2015/img/ico/ico_str.png") no-repeat right top; margin: 0 0 0 8px; padding: 0 0 20px 0; vertical-align: middle; }
+*:first-child+html .str { padding-bottom:5px; }
+
+
+
+/*-------------------------------------
+  ページタイトル
+-------------------------------------*/
+
+#contentHeader h1 .userName { display:inline-block; max-width:750px; vertical-align:bottom; }
+
+
+
+/*-------------------------------------
+  ガワ
+-------------------------------------*/
+
+section.section { border-top:none; padding:0 0 25px 0; }
+section.section .sectionHeader {}
+section.section .sectionHeader h3 { font-size:18px; padding:0 0 10px 0; }
+section.section .sectionHeader .txt { color:#808080; padding:0 0 10px 0; }
+section.section .sectionHeader .err,
+section.section .sectionHeader .att { padding:0 0 5px 0; }
+section.section .sectionInner { background:#f0f0f0; padding:36px 48px 40px 48px; border:1px solid #dcdcdc; border-radius:4px; }
+
+section.section .sectionInner .gBtn { margin:25px auto 0 auto; width:170px; }
+section.section .link { text-align:right; margin:20px 0 0 0; }
+section.section .link a { color:#007ebe; }
+section.section .noRegist.subinfo,
+section.section .noRegist.link { text-align:left; }
+section.section .subinfo { color:#808080; text-align:right; margin:15px 0 0 0; }
+section.section .noRegist { color:#808080; margin:15px 0 0 0; }
+.attention { margin:10px 0 0 0; }
+section.section .txt { font-size: 12px; }
+
+/*-------------------------------------
+  table
+-------------------------------------*/
+
+/*基本*/
+table { border-top:none; }
+table tbody th { padding:25px 0 23px 0; border:none; background:none;  color:#808080; width:175px; vertical-align:middle; font-size:15px; }
+table tbody td { padding:25px 0 23px 0; border:none; line-height:1.8; }
+*:first-child+html table tbody th,
+*:first-child+html table tbody td { border-bottom:1px solid #dcdcdc; }
+table tbody tr { border-bottom:1px solid #dcdcdc; }
+table tbody td.change { width:51px; }
+table tbody td.memberMail { padding-right:30px; max-width:424px; word-wrap:break-word; }
+table tbody td span.tit { display:inline-block; width:70px; }
+table tbody td span.info { font-size:11px; color:#808080; display:inline-block; vertical-align:middle; }
+table tbody td span.info.passWord { margin:0 0 0 20px; }
+.delCheck { margin:20px 0 0 0; }
+.delPremium { margin: 10px 0 0 0; color:#e73656;}
+.tag { display:inline-block; border-radius:2px; padding:5px 7px; background:#dcdcdc; font-size:11px; line-height:1.416666667; }
+
+/*.resist*/
+table.resist { border-color:#d2d2d2; border-bottom:1px solid #dcdcdc; border-collapse: separate; padding:17px 0 10px 0; }
+*:first-child+html table.resist tbody th,
+*:first-child+html table.resist tbody td { border-bottom:none; }
+table.resist tbody th { padding:3px 0; }
+table.resist tbody td { padding:3px 0; }
+table.resist tbody tr { border-bottom:none; }
+
+/*ポイント*/
+table.point tbody th { vertical-align:top; }
+
+/*form 要素別スタイル*/
+/*住所*/
+.prefFrmWrap{ background:none; border-bottom:none; }
+.prefFrmWrap th, .prefFrmWrap td { padding:20px 0 10px 0; }
+*:first-child+html .prefFrmWrap th ,
+*:first-child+html .prefFrmWrap td { border-bottom:none; }
+.add1FrmWrap { background:none; border-bottom:none; }
+.add1FrmWrap th, .add1FrmWrap td { padding:0; }
+*:first-child+html .add1FrmWrap th ,
+*:first-child+html .add1FrmWrap td { border-bottom:none; }
+.add2FrmWrap { }
+.add2FrmWrap th, .add2FrmWrap td { padding-top:15px; }
+/*パスワード*/
+.pass1FrmWrap { border-bottom:none; }
+.pass1FrmWrap th, .pass1FrmWrap td{ padding:20px 0 10px 0; }
+.pass1FrmWrap th { border-bottom:1px solid #dcdcdc; }
+.pass2FrmWrap { }
+.pass2FrmWrap th, .pass2FrmWrap td{ padding-top:0; }
+
+
+
+td.nameFrm input { width:230px; }
+td.nameFrm input[name="Mei"],
+td.nameFrm input[name="MeiKana"]{ margin:0 0 0 10px; }
+td.birthFrm select { width:90px; margin:0 9px 0 0; }
+td.birthFrm span { margin:0 20px 0 0; }
+td.postFrm .adress { width:180px; margin:0 10px 0 0; }
+td.postFrm .btnGray { width:125px; margin:0 15px 0 0; }
+td.phonFrm input { width:120px; margin:0 10px 0 0; }
+td.sexTypeFrm label { margin:0 20px 0 0; }
+td.add1Frm input,td.add2Frm input{ width:490px; }
+td.mailFrm input { width:490px; }
+td.effectiveFrm select { width:92px; margin:0 7px 0 0 }
+td.effectiveFrm span { margin:0 17px 0 0; }
+
+
+
+/*-------------------------------------
+  secComplete
+-------------------------------------*/
+
+#secComplete {}
+#secComplete .sectionInner { padding:36px 48px 60px; }
+#secComplete .sectionHeader { border-bottom:1px solid #dcdcdc; }
+#secComplete .read {  font-size:15px; margin:20px 0 0 0; }
+#secComplete .txt { text-align:center; margin:40px 0 0 0; font-size:15px; }
+#secComplete .link { text-align:center; }
+
+
+/*-------------------------------------
+  サイドバー sell
+-------------------------------------*/
+
+#searchSidebar .sellAbout { border:1px solid #dcdcdc; margin:10px 0 0 0; padding:0 0 18px 0; border-radius:2px; }
+#searchSidebar .sellAbout h3 { margin:22px 0 0 0; font-size:16px; text-align:center; }
+#searchSidebar .sellAbout ul { padding-left:15px; margin-top:7px; }
+#searchSidebar .sellAbout ul li { margin:1px 0 0 0; }
+
+
+
+/*-------------------------------------
+  退会
+-------------------------------------*/
+
+.errBox { padding: 30px 0 15px 0; color: #808080; line-height: 1.7; font-size: 15px; text-align: center; }
+.errBox p { margin:15px 0 0 0; font-size:11px; }
+.refreshBox { border-bottom: 1px solid #dcdcdc; padding:20px 0; }
+#topLink .gBtnWhite { margin:25px auto 0; }
+
+/*-------------------------------------
+  #secPoint
+-------------------------------------*/
+
+#secPoint span.pointResult { font-weight:bold; font-size:16px; margin:0 5px 0 0; }
+#secPoint td.point { text-align: right; }
+#secPoint td.point span { font-size:16px; margin:0 5px 0 0; }
+#secPoint .sectionHeader.clearfix h3{ float:left; }
+#secPoint .limitPoint { float: right; font-size: 14px; margin: 9px 0 0; }
+#secPoint .limitPoint p { border-left: 1px solid #c9c9c9; color: #808080; margin: 0 0 0 10px; padding: 0 0 0 10px; float: left; height: 15px; line-height: 15px; }
+#secPoint .limitPoint p.first{ border-left: medium none; }
+
+
+/*-------------------------------------
+  secAttention
+-------------------------------------*/
+
+#secAttention {}
+#secAttention .sectionInner { background:#ffffff; border: 1px solid #E73656; padding:15px 48px 15px 48px; }
+#secAttention .sectionHeader { border-bottom:none; text-align:center; margin:0 0 4px 0; }
+#secAttention h3 { padding:0 0 0 0; }
+#secAttention h3 .ico_alert { background: url(../../shop/img/goods_common.png) no-repeat left -260px; height:29px; width:27px; display:inline-block; vertical-align:middle; padding:7px 6px 0 0; }
+#secAttention .contBody { text-align:center; }
+
+/*-------------------------------------
+  CouponPoint
+-------------------------------------*/
+#secPoint .point #Coupon #CouponTitle{margin:0 0 22px 0;}
+#secPoint .point #Coupon #CouponPoint{margin:0 0 10px 0;}
+#secPoint .point #Coupon #CouponShopList{line-height:2.0; margin:0 0 15px 0;}
+#secPoint .point #Coupon #notice{ font-size:12px; line-height:2; margin:0 0 15px 0;}
+section.section .sectionInner #Coupon .gBtn{ margin:0 0 15px 0; width:280px;}
+
+
+
+/*-------------------------------------
+  パスワードをマスク
+-------------------------------------*/
+[data-toggle="masking-password"] { color:#007ebe; cursor:pointer; display:inline-block; font-size:12px; }
+#passwordOriginal,
+#passwordMask { display:block; }
+#passwordOriginal.hide,
+#passwordMask.hide { display:none; }
+
+
+
+/*-------------------------------------
+  退会手続き
+-------------------------------------*/
+.refreshBox .indexItem {}
+.refreshBox .indexItemAction { position:relative; display:inline-block; }
+.refreshBox .indexItemFormControl { font-size:15px; line-height:1.333333333333333; }
+.refreshBox .indexItemContent { padding-left:32px; margin-top:5px; }
+.refreshBox .indexItemContent > ul { list-style:disc; padding-left:18px; }
+
+.refreshBox .indexItem + .indexItem { margin-top:10px; padding-top:20px; border-top:1px solid #dcdcdc; }
+
+.refreshBox #confirm { margin-top:15px; text-align:center; }
+
+

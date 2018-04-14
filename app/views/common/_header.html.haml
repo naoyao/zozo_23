@@ -49,7 +49,12 @@
                 %li#hUserName
                   %p#hThumbs
                     %span#hName
-                      %span.userName.textTruncate na0418 様
+                      -if customer_signed_in?
+                        %span.userName.textTruncate
+                          =link_to "#{current_customer.email}様", "/customers/#{current_customer.id}"
+                      -else
+                        %span.userName.textTruncate
+                          =link_to "ログイン", customer_session_path
 
                 %li#hNotice.hPopWrap.static
                   %a

@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180409074229) do
+ActiveRecord::Schema.define(version: 20180411125354) do
 
-  create_table "customers", force: :cascade do |t|
+  create_table "customers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -40,8 +40,9 @@ ActiveRecord::Schema.define(version: 20180409074229) do
     t.integer  "sexuality"
     t.datetime "birthday"
     t.integer  "point"
-    t.index ["email"], name: "index_customers_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_customers_on_reset_password_token", unique: true
+    t.integer  "check_rule"
+    t.index ["email"], name: "index_customers_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_customers_on_reset_password_token", unique: true, using: :btree
   end
 
 end

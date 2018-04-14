@@ -1,54 +1,81 @@
-%h2 基本情報
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = devise_error_messages!
-  %table
-    %tr
-      %th 性別
-      %td
-        %label
-          = f.radio_button :sexuality, :man
-          男性
-        %label
-          = f.radio_button :sexuality, :woman
-          女性
-        %label
-          = f.radio_button :sexuality, :other
-          その他
-    %tr
-      %th 生年月日
-      %td
-        = f.date_select(:birthday,
-              start_year: 1910,
-              end_year: 2018,
-              use_month_numbers: true,
-              default: Date.new(1990,1,1))
-    %tr
-      %th 郵便番号
-      %td
-        = f.text_field :postal_code
-    %tr
-      %th
-        メールアドレス
-        %br
-        (ZOZO ID)
-      %td
-        = f.email_field :email, autofocus: true, autocomplete: "email"
-    %tr
-      %th
-        パスワード
-        %br
-        - if @minimum_password_length
-          %em
-            (#{@minimum_password_length} characters minimum)
-      %td
-        = f.password_field :password, autocomplete: "off"
-    %tr
-      %th
-        パスワード
-        %br
-        （確認）
-      %td
-        = f.password_field :password_confirmation, autocomplete: "off"
-  .actions
-    = f.submit "会員登録する"
-= render "customers/shared/links"
+#body
+  #content
+    %article
+      #contentHeader.clearfix
+        %h1 新規会員登録
+      #errContainer
+      %section#registContainer.section.registForm
+        .sectionInner
+          .sectionHeader
+            %h3 基本情報
+          .contBody
+            = form_for(resource, as: resource_name, url: registration_path(resource_name), id: 'MyForm', class: 'decorateForm') do |f|
+              %table
+                %tbody
+                  %tr.secSexType
+                    %th 性別
+                    %td.sexTypeFrm
+                      %label
+                        = f.radio_button :sexuality, :man
+                        男性
+                      %label
+                        = f.radio_button :sexuality, :woman
+                        女性
+                      %label
+                        = f.radio_button :sexuality, :other
+                        その他
+                  %tr.secBirthType
+                    %th 生年月日
+                    %td.birthFrm.birth
+                      = raw sprintf(f.date_select(:birthday,
+                          start_year: 1910,
+                          end_year: 2018,
+                          use_month_numbers: true,
+                          default: Date.new(1990,1,1),
+                          date_separator: "%s"),'年　','月　')+'日'
+                  %tr#secZipCode
+                    %th 郵便番号
+                    %span.str
+                    %td.postFrm.linedParent
+                      = f.text_field :postal_code, placeholder: '例：4328065',maxlength: 7
+                      %p.note ※数字７ケタ、ハイフン無し
+                      %p.searchZip
+                        %a.ico_blank{href: 'http://www.post.japanpost.jp/zipcode/index.html', target: '_blank'} 郵便番号を検索 　
+                  %tr#secMailAdd
+                    %th
+                      メールアドレス
+                      %br
+                      (ZOZO ID)
+                      %span.str
+                    %td.mailFrm
+                      .main.clearfix
+                        = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: '例：taizo@taizo.com'
+                        %p.note ※メールアドレスがZOZO IDとなります。
+                  %tr#secPassword
+                    %th パスワード
+                    %span.str_picture
+                    %td.passFrm.passErr
+                      = f.password_field :password, autocomplete: "off", placeholder: '例：taizotaizo11'
+                      %p.note ※ZOZO IDに含まれない英数字混合８〜１２文字
+                  %tr#secPassword
+                    %th
+                      パスワード
+                      %br
+                      （確認）
+                    %td.passFrm.passConfErr
+                      = f.password_field :password_confirmation, autocomplete: "off"
+                      %p.note ※パスワードを再入力
+              .confTxt
+                %p#registAgree
+                  %label
+                    =f.check_box :check_rule
+                    %a.ico_pop.popup{href: "#kiyakuBox"} 利用規約
+                    、
+                    %a.ico_pop.popup{href: "#ppBox"} 個人情報保護方針
+                    に同意する
+                    %p.note.check_rule 　
+                %p.btn
+                  = f.submit "会員登録する", class: 'gBtn'
+    #note.zozoid
+      %p ※携帯メールアドレスをご登録いただく場合、zozo.jpおよびcontact.zozo.jpからのドメイン着信許可を設定してください
+      %p ※「会員登録する」を選択したことで、利用規約に同意されたものといたします。
