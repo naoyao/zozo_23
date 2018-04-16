@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   devise_for :customers
-  get 'top/index'
-  get 'top/show'
+  resources :top, only: [:index, :show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'top#index'
 
