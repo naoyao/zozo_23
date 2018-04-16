@@ -1,0 +1,10 @@
+%h2 メールアドレスの変更
+= form_for(current_customer, url: "/customers/#{current_customer.id}/confirm/email", method: 'PATCH') do |f|
+  %table
+    %tr
+      %th
+        メールアドレス
+      %td
+        = f.email_field :email, autofocus: true, autocomplete: "email"
+  .actions
+    = f.submit "変更する"

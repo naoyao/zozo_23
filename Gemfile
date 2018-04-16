@@ -70,3 +70,7 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
 end
+
+gem 'devise'
+gem 'enum_help'
+gem 'pry-rails'
