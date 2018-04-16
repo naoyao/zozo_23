@@ -2,7 +2,7 @@
   #content
     %article
       #contentHeader.clearfix
-        %h1 新規会員登録
+        %h1#registCus 新規会員登録
       #errContainer
       %section#registContainer.section.registForm
         .sectionInner
@@ -34,8 +34,9 @@
                           default: Date.new(1990,1,1),
                           date_separator: "%s"),'年　','月　')+'日'
                   %tr#secZipCode
-                    %th 郵便番号
-                    %span.str
+                    %th 
+                      郵便番号
+                      %span.str
                     %td.postFrm.linedParent
                       = f.text_field :postal_code, placeholder: '例：4328065',maxlength: 7
                       %p.note ※数字７ケタ、ハイフン無し
@@ -52,8 +53,9 @@
                         = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: '例：taizo@taizo.com'
                         %p.note ※メールアドレスがZOZO IDとなります。
                   %tr#secPassword
-                    %th パスワード
-                    %span.str_picture
+                    %th
+                      パスワード
+                      %span.str
                     %td.passFrm.passErr
                       = f.password_field :password, autocomplete: "off", placeholder: '例：taizotaizo11'
                       %p.note ※ZOZO IDに含まれない英数字混合８〜１２文字

@@ -1,3 +1,7 @@
+#contentHeader #registCus {
+    background-image: image-url("register.png");
+}
+
 .registForm.section {
     background:#f0f0f0;
     border:1px solid #e6e6e6;
@@ -14,11 +18,7 @@
     }
   }
 
-.registForm{
-  span.str {
-    height: 0;
-    margin: 0;
-  }
+.registForm {
   border-bottom: 1px solid #DCDCDC;
   .note{
     color:#808080;
@@ -116,7 +116,6 @@
   override
 -------------------------------------*/
 
-
 select {
       padding: 9px 6px 7px 8px;
       -webkit-appearance: none;/* ベンダープレフィックス(Google Chrome、Safari用) */
@@ -151,9 +150,15 @@ input[type='text'] {
 }
 #contentHeader {
   border:none;
+  background-color: white;
   h1 {
-    padding: 4px 0 0 47px;
-    background-position: 0 -560px;
+    margin:15px 0 0 10px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    padding: 5px 50px;
+    background-size: contain;
+    font-size: 23px;
+    height: 40px;
   }
 }
 .twoColumun #content {
@@ -190,11 +195,11 @@ a.blLink {
 .str {
   color: #808080;
   background-image: image-url("ico_str.png");
-  background-position: top right;
+  background-position: bottom left;
   background-repeat: no-repeat; 
-  margin: 0 0 0 8px;
-  padding: 0 0 20px 0;
-  vertical-align: middle;
+  display:inline-block;
+  width: 50px;
+  height:30px;
 }
 *:first-child+html .str {
   padding-bottom:5px;
