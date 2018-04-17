@@ -1,0 +1,691 @@
+#contentHeader #registCus {
+    background-image: image-url("register.png");
+}
+
+.registForm.section {
+    background:#f0f0f0;
+    border:1px solid #e6e6e6;
+    border-radius:4px;
+    margin:60px auto 0;
+    padding:0;
+    width:700px;
+    h3 {
+      padding-bottom: 8px;
+    }
+    .sectionInner {
+      padding: 36px 49px 40px 49px;
+      border:none;
+    }
+  }
+
+.registForm {
+  border-bottom: 1px solid #DCDCDC;
+  .note{
+    color:#808080;
+    font-size:11px;
+  }
+  .err {
+    background: #ffedf5;
+    border-color: #ffb0bd !important;
+  }
+  .errTxt {
+  clear: both;
+  color: #e83656 !important;
+  display: block;
+  margin: 3px 0 0 0 !important;
+  }
+  .postFrm, .passFrm, .idFrm {
+    input{
+      width: 225px;
+    }
+  }
+  .sexTypeFrm {
+    label {
+      margin:0 25px 0 0;
+    }
+    input{
+      font-size: 13px;
+      margin-right: 5px;
+    }
+  }
+  .birthFrm {
+  }
+  .postFrm {
+    position: relative;
+    .searchZip {
+      position: absolute;
+      right: 10px;
+      top: 32px;
+      margin: 0;
+      .ico_blank {
+        padding-top: 1px;
+        color:#808080;
+        background-image: image-url("ico_blank_02.png");
+        background-position: right top;
+        background-repeat: no-repeat;
+
+      }
+    }
+  }
+  .mailFrm {
+    input {
+      width: 307px;
+      display: inline-block;
+    }
+  }
+  .note {
+    margin-top: 5px;
+  }
+  .sub {
+    margin-top: 12px;
+  }
+  .confTxt {
+    margin-top: 20px;
+    text-align: center;
+    .ico_pop {
+      padding-right: 22px;
+      background-image: image-url("ico_blank3.gif");
+      background-position: right top;
+      background-repeat: no-repeat;
+      line-height: 1.6;
+      font-size:13px;
+      display:inline-block;
+      color:#007ebe;
+    }
+    .gBtn {
+      margin-top: 15px;
+      width: 270px;
+      color: #ffffff !important;
+      display: block;
+      text-align: center;
+      border-radius: 3px;
+      padding: 11px 0 8px;
+      background: #2490D0;
+      cursor: pointer;
+    }
+  }
+}
+#note {
+  color: #808080;
+  font-size: 10px;
+  margin: 15px auto 0 auto;
+  width: 700px;
+}
+
+/*-------------------------------------
+  override
+-------------------------------------*/
+
+select {
+      padding: 9px 6px 7px 8px;
+      -webkit-appearance: none;/* ベンダープレフィックス(Google Chrome、Safari用) */
+      -moz-appearance: none;  /* ベンダープレフィックス(Firefox用) */
+      appearance: none;   /* 標準のスタイルを無効にする */
+      background-image: image-url("ico_select.gif");
+      background-position: top right;
+      background-repeat: no-repeat;
+      background-color: #fff;
+    }
+
+table {
+  width: 100%;
+}
+
+.section {
+  input[type='text'],input[type='password'],input[type='email']{
+      padding: 10px 7px;
+      border-radius: 2px;
+      border: 1px solid #c8c8c8;
+  }
+}
+input[type='text']:focus,[type='password']:focus {
+  border-color: #36a2dc;
+}
+input[type='text'] {
+  width: 263px;
+}
+
+.hide {
+  display: none;
+}
+#contentHeader {
+  border:none;
+  background-color: white;
+  h1 {
+    margin:15px 0 0 10px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    padding: 5px 50px;
+    background-size: contain;
+    font-size: 23px;
+    height: 40px;
+  }
+}
+.twoColumun #content {
+  margin-top: 28px;
+}
+.gBtnWhite {
+  background: none;
+}
+.btnWrapper > form {
+  display:inline; 
+}
+.btnWrapper .btn {
+  width:170px; margin:0 2px;
+}
+.btnWrapper .gBtnWhite {
+  width:170px;
+}
+body .decorateForm label .checkbox{
+  margin:0 10px 0 0;
+}
+.mac body .decorateForm label .checkbox {
+  vertical-align:top;
+}
+section.section .sectionInner .change .gBtn.btnSS {
+  width:52px; margin:0;
+  padding:2px 0 0 0;
+}
+a.blLink {
+  color:#007ebe;
+}
+.err .centerLine {
+  text-align:center; margin:25px 0 0 0;
+}
+.str {
+  color: #808080;
+  background-image: image-url("ico_str.png");
+  background-position: bottom left;
+  background-repeat: no-repeat; 
+  display:inline-block;
+  width: 50px;
+  height:30px;
+}
+*:first-child+html .str {
+  padding-bottom:5px;
+}
+
+
+
+/*-------------------------------------
+  ページタイトル
+-------------------------------------*/
+
+#contentHeader h1 .userName {
+  display:inline-block; max-width:750px; vertical-align:bottom;
+}
+
+
+
+/*-------------------------------------
+  ガワ
+-------------------------------------*/
+
+
+.section {
+  border-top: none;
+  padding-left: 25px;
+  .sectionHeader {
+    h3 {
+      font-size: 18px;
+      padding-right: 10px;
+      color: #2d2d2d;
+      border-bottom: 1px solid #dcdcdc;
+    }
+    .txt {
+      color:#808080;
+      padding-right: 10px;
+    }
+    .err, .attr {
+      padding-right: 5px;
+    }
+  }
+  .sectionInner {
+    background-color: #f0f0f0;
+    padding: 36px 48px 40px 48px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    .gBtn {
+      margin: 25px auto 0 auto;
+      // width: 170px;
+    }
+  }
+  .link {
+    text-align: right;
+    margin-top: 20px;
+    a {
+      color: #007ebe;
+    }
+  }
+  .noRegist {
+    text-align: left;
+    color: #808080;
+    margin-top: 15px;
+  }
+  .subinfo {
+    color: #808080;
+    text-align: right;
+    margin-top: 15px;
+  }
+  .txt {
+    font-size: 12px;
+  }
+}
+
+
+/*-------------------------------------
+  table
+-------------------------------------*/
+
+/*基本*/
+table {
+  border-top: none;
+  tbody {
+    tr {
+      border-bottom: 1px solid #dcdcdc;
+    }
+    th, td{
+      padding: 21px 0 20px 0;
+      border:none;
+    }
+    th {
+      width: 175px;
+      vertical-align: middle;
+      font-size: 15px;
+      background:none;
+      color:#808080;
+    }
+    td {
+      line-height: 1.8;
+      .tit {
+        display: inline-block;
+        width: 70px;
+      }
+      .info {
+        font-size: 11px;
+        color: #808080;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .info.passWord {
+        margin-left: 20px;
+      }
+    }
+    td.change {
+      width: 51px;
+    }
+    td.memberMail {
+      padding-right: 30px;
+      max-width: 424px;
+      word-wrap:break-word;
+    }
+    tr {
+      border-bottom: 1px solid #dcdcdc;
+    }
+  }
+}
+
+.delCheck {
+  margin-top: 20px;
+}
+.delPremium {
+  margin-top: 10px;
+  color: #e73656;
+}
+.tag {
+  display: inline-block;
+  border-radius: 2px;
+  padding:5px 7px;
+  background: #dcdcdc;
+  font-size: 11px;
+  line-height: 1.41666667;
+}
+
+*:first-child+html table tbody th,
+*:first-child+html table tbody td {
+  border-bottom:1px solid #dcdcdc;
+}
+
+/*.resist*/
+table.resist {
+  border-color: #d2d2d2;
+  border-bottom: 1px solid #dcdcdc;
+  border-collapse: separate;
+  padding: 17px 0 10px 0;
+  th, td {
+    padding: 3px 0;
+  }
+  tr {
+    border-bottom: none;
+  }
+}
+
+/*ポイント*/
+table.point tbody th {
+  vertical-align:top;
+}
+
+*:first-child+html table.resist tbody th,
+*:first-child+html table.resist tbody td {
+  border-bottom:none;
+}
+
+/*form 要素別スタイル*/
+/*住所*/
+.prefFrmWrap {
+  background: none;
+  border-bottom: none;
+  th, td {
+    padding: 20px 0 10px 0;
+  }
+}
+*:first-child+html .prefFrmWrap th ,
+*:first-child+html .prefFrmWrap td {
+  border-bottom:none;
+}
+
+.add1FrmWrap {
+  background:none;
+  border-bottom: none;
+  th, td {
+    padding: none;
+  }
+}
+*:first-child+html .add1FrmWrap th ,
+*:first-child+html .add1FrmWrap td {
+  border-bottom:none;
+}
+
+.add2FrmWrap {
+  th, td {
+  padding-top: 15px;
+  }
+}
+
+.pass1FrmWrap {
+  border-bottom: none;
+  th, td {
+    padding: 20px 0 10px 0;
+  }
+  th {
+    border-bottom: 1px solid #dcdcdc;
+  }
+}
+
+.passFrmWrap {
+  th,td {
+    padding-top: 0;
+  }
+}
+
+.nameFrm {
+  input {
+    width: 230px;
+  }
+  input[name='first_name'],input[name='first_name'] {
+    margin-bottom: 10px;
+  }
+}
+
+.birthFrm {
+  select {
+    width: 90px;
+    margin-right: 9px;
+  }
+  span {
+    margin-left: 20px;
+  }
+}
+
+.postFrm {
+  .adress {
+    width: 180px;
+    margin-right:10px;
+  }
+  .btnGray {
+    width: 125px;
+    margin-right: 15px;
+  }
+}
+
+.phonFrm input {
+  width: 120px;
+  margin-right: 10px;
+}
+
+.sexTypeFrm label {
+  margin-right: 20px;
+}
+
+.add1Frm input, .add2Frm input {
+  width: 490px;
+}
+
+.mailFrm input {
+  width: 490px;
+}
+
+.effectiveFrm {
+  select{
+    width: 92px;
+    margin-right: 7px;
+  }
+  span {
+    margin-right: 17px;
+  }
+}
+
+
+/*-------------------------------------
+  secComplete
+-------------------------------------*/
+#seeComplete {
+  .sectionInner {
+    padding: 36px 48px 60px;
+  }
+  .sectionHeader {
+    border-bottom: 1px solid #dcdcdc;
+  }
+  .read {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  .txt {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 15px;
+  }
+  .link {
+    text-align: center;
+  }
+}
+
+
+/*-------------------------------------
+  サイドバー sell
+-------------------------------------*/
+#searchSiderbar {
+  .sellAbout {
+    border: 1px solid #dcdcdc;
+    margin-top: 10px;
+    padding-bottom: 18px;
+    border-radius: 2px;
+    h3 {
+      margin-top: 22px;
+      font-size: 16px;
+      text-align: center;
+    }
+    ul {
+      padding-left: 15px;
+      margin-top: 7px;
+    }
+    li {
+      margin-top: 1px;
+    }
+  }
+}
+
+
+/*-------------------------------------
+  退会
+--------------------------------*/
+.errBox {
+  padding: 30px 0 15px 0;
+  color: #808080;
+  line-height: 1.7;
+  font-size: 15px;
+  text-align: center;
+  p {
+    margin-top: 15px;
+    font-size: 11px;
+  }
+}
+.refreshBox {
+  border-bottom: 1px solid #dcdcdc;
+  padding: 20px 0;
+}
+
+#topLink .gBtnWhite {
+  margin: 25px 0;
+}
+
+/*-------------------------------------
+  #secPoint
+-------------------------------------*/
+
+#secPoint {
+  .pointResult {
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 5px;
+  }
+  .point {
+    text-align: right;
+    span {
+      font-size: 16px;
+      margin-right: 5px;
+    }
+  }
+  .sectionHeader h3 {
+    float: left;
+  }
+  .limitPoint {
+    float: right;
+    font-size: 14px;
+    margin: 9px 0 0;
+    p {
+      border-left: 1px solid #c9c9c9;
+      color: #808080;
+      margin-left: 10px;
+      padding-left: 10px;
+      float: left;
+      height: 15px;
+      line-height: 15px;
+    }
+    .first {
+      border-left: medium none;
+    }
+  }
+}
+
+/*-------------------------------------
+  secAttention
+-------------------------------------*/
+
+#secAttention {
+  .sectionInner {
+    background:#ffffff;
+    border: 1px solid #E73656;
+    padding:15px 48px 15px 48px;
+  }
+  .sectionHeader {
+    border-bottom: none;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+  .ico_aler {
+    background: url(../../shop/img/goods_common.png) no-repeat left -260px;
+    height:29px;
+    width:27px;
+    display:inline-block; vertical-align:middle; padding:7px 6px 0 0;
+  }
+  .contBody {
+    text-align:center;
+  }
+}
+
+/*-------------------------------------
+  CouponPoint
+-------------------------------------*/
+#secPoint {
+  #CouponTitle {
+    margin-bottom: 22px;
+  }
+  #CouponPoint {
+    margin-bottom: 10px;
+  }
+  #CouponShopList {
+    line-height: 2.0;
+    margin-bottom: 15px;
+  }
+  #notice {
+    font-size: 12px;
+    line-height: 2.0;
+    margin-bottom: 15px;
+  }
+  #Coupon .gBtn {
+    margin-bottom: 15px;
+    width: 280px;
+  }
+}
+
+
+/*-------------------------------------
+  パスワードをマスク
+-------------------------------------*/
+[data-toggle="masking-password"] {
+  color:#007ebe;
+  cursor:pointer;
+  display:inline-block;
+  font-size:12px;
+}
+#passwordOriginal,
+#passwordMask {
+  display:block;
+}
+#passwordOriginal.hide,
+#passwordMask.hide {
+  display:none;
+}
+
+
+/*-------------------------------------
+  退会手続き
+-------------------------------------*/
+.refreshBox {
+  .indexItemAction {
+    position: relative;
+    display: inline-block;
+  }
+  .indexItemFormControl {
+    font-size: 15px;
+    line-height: 1.3333;
+  }
+  .indexItemContent {
+    padding-left: 32px;
+    margin-top: 5px;
+  }
+  .indexItemContent > ul {
+    list-style: disc;
+    padding-left: 18px;
+  }
+  .indexItem + .indexItem {
+    margin-top:10px;
+    padding-top:20px;
+    border-top:1px solid #dcdcdc;
+  }
+  #confirm {
+    margin-top: 15px;
+    text-align: center;
+  }
+}
