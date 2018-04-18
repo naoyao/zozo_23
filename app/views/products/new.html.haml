@@ -34,9 +34,5 @@
     .newProductReleaseDate
       %h5 発売日
       = f.date_select :release_date, start_year: 2000, end_year: Time.now.year, use_month_numbers: true
-    .newProductImage
-      = f.fields_for :images_attributes do |image|
-        %img
-        = image.file_field :image, multipart: true
       .newProductBtn
       = f.submit "登録"

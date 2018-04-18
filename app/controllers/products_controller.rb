@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   end
 
   def new
-    @product = Product.new
+   @product = Product.new
   end
 
   def create
@@ -29,7 +29,6 @@ class ProductsController < ApplicationController
   end
 
   def show
-    # @product = Product.order("id ASC")
   end
 
   private
