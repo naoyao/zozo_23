@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180411125354) do
+ActiveRecord::Schema.define(version: 20180417091215) do
 
   create_table "customers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false
@@ -45,4 +45,25 @@ ActiveRecord::Schema.define(version: 20180411125354) do
     t.index ["reset_password_token"], name: "index_customers_on_reset_password_token", unique: true, using: :btree
   end
 
+  create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string  "image"
+    t.integer "product_id", null: false
+    t.index ["product_id"], name: "index_images_on_product_id", using: :btree
+  end
+
+  create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string  "name",                          null: false
+    t.integer "normal_price",                  null: false
+    t.integer "discount_price"
+    t.integer "tax",                           null: false
+    t.integer "price_status"
+    t.text    "comment_1",       limit: 65535
+    t.text    "comment_2",       limit: 65535
+    t.integer "small_category",                null: false
+    t.integer "large_category",                null: false
+    t.integer "sexual_category"
+    t.date    "release_date"
+  end
+
+  add_foreign_key "images", "products"
 end

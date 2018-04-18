@@ -1,0 +1,42 @@
+.productForm
+  %h2 商品登録フォーム
+  = form_for @product do |f|
+    %br
+    .newProductName
+      %h5 商品名・型番
+      = f.text_field :name
+    .newProductPrice
+      %h5 価格(円)
+      = f.label :sprice_status_0, "通常価格(円)"
+      = f.text_field :normal_price
+      %br
+      = f.label :sprice_status_1, "割引価格(円)"
+      = f.text_field :discount_price
+    .newProducTax
+      %h5 消費税8%
+      = f.hidden_field :tax, value: "8"
+    .newProducCategory
+      %h5 小カテゴリー
+      = f.select :small_category, grouped_options_for_select(Product::SELECT_SMALL)
+    .newProducCategory
+      %h5 性別カテゴリー
+      = f.radio_button :sexual_category, 0
+      = f.label :sexual_category_0, "メンズ"
+      = f.radio_button :sexual_category, 1
+      = f.label :sexual_category_1, "レディース"
+      = f.radio_button :sexual_category, 2
+      = f.label :sexual_category_1, "ニューカマー"
+    .newProductComment
+      %h5 コメント１
+      = f.text_area :comment_1, cols: 50, rows:2
+      %h5 コメント２
+      = f.text_area :comment_2, cols: 50, rows:3
+    .newProductReleaseDate
+      %h5 発売日
+      = f.date_select :release_date, start_year: 2000, end_year: Time.now.year, use_month_numbers: true
+    .newProductImage
+      = f.fields_for :images_attributes do |image|
+        %img
+        = image.file_field :image, multipart: true
+      .newProductBtn
+      = f.submit "登録"
