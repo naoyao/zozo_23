@@ -1,6 +1,10 @@
 class ProductsController < ApplicationController
+  def index
+    @product = Product.order("id ASC")
+  end
+
   def new
-   @product = Product.order("id ASC")
+    @product = Product.new
   end
 
   def create
