@@ -15,7 +15,9 @@ class CustomersController < ApplicationController
 
 
   def update_default
-    if current_customer.update(default_params)
+    if params[:back]
+      render :edit_default
+    elsif current_customer.update(default_params)
       render :show
     else
       render :edit_default
