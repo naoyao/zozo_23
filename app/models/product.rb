@@ -9,7 +9,7 @@ class Product < ApplicationRecord
   # has_many :favorite_brands
   # has_many :favorite_products
   # has_many :wtched_products
-  # has_many :images
+
 #=================
   #小カテゴリーリスト
 #=================
