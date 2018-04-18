@@ -1,0 +1,94 @@
+.twoColumn {
+  width: 980px;
+  margin:0 auto;
+  h1 {
+    background-image: image-url("register.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+  }
+  #content {
+    width: 780px;
+    float: right;
+    margin-top: 28px;
+  }
+  section {
+    padding: 0 0 25px 0;
+  }
+
+  h3 {
+    padding-bottom: 10px;
+  }
+  .mac .gBtnWhite.btnSS {
+    padding: 2px 0 0;
+  }
+
+  .gBtnWhite.btnSS {
+    padding: 1px 0;
+    width: 51px;
+    font-size: 13px;
+  }
+  a:visited {
+    color: #007ebe;
+    text-decoration: none;
+  }
+  .gBtnWhite {
+    border: 1px solid #2490D0;
+    color: #2490D0 !important;
+    display: block;
+    text-align: center;
+    border-radius: 2px;
+    padding: 10px 0 7px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    font-size: 13px;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-font-smoothing: subpixel-antialiased;
+    font-smoothing: subpixel-antialiased;
+    -webkit-appearance: none;
+  }
+}
+
+
+#searchSidebar {
+  float: left;
+  width: 150px;
+  overflow: hidden;
+  .sideBox {
+    margin: 23px 0 0;
+    padding: 0 0 15px;
+    border-bottom: solid 1px #e6e6e6;
+    h3 {
+      font-size: 18px;
+    }
+    ul {
+      margin-top: 8px;
+      list-style: none;
+      li a {
+        padding: 3px 0;
+        display: block;
+        color: #646464;
+      }
+    }
+  }
+  .sellAbout {
+    border: 1px solid #dcdcdc;
+    margin: 10px 0 0 0;
+    padding: 0 0 18px 0;
+    border-radius: 2px;
+    h3 {
+      margin: 22px 0 0 0;
+      font-size: 16px;
+      text-align: center;
+    }
+    ul {
+      padding-top: 15px;
+      margin-left: 7px;
+      margin-top: 0;
+    }
+    li {
+      margin-top: 1px;
+    }
+  }
+}
+

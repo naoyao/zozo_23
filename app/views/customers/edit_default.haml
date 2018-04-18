@@ -1,57 +1,77 @@
-%h2 基本情報
-= form_for(current_customer, url: "/customers/#{current_customer.id}/confirm/default", method: 'PATCH') do |f|
-  %table
-    %tr
-      %th お名前
-      %td
-        = f.text_field :last_name
-        = f.text_field :first_name
-    %tr
-      %th お名前（カナ）
-      %td
-        = f.text_field :last_name_kana
-        = f.text_field :first_name_kana
-    %tr
-      %th 性別
-      %td
-        %label
-          = f.radio_button :sexuality, :man
-          男性
-        %label
-          = f.radio_button :sexuality, :woman
-          女性
-        %label
-          = f.radio_button :sexuality, :other
-          その他
-    %tr
-      %th 生年月日
-      %td
-        = f.date_select(:birthday,
-              start_year: 1910,
-              end_year: 2018,
-              use_month_numbers: true,
-              default: Date.new(1990,1,1))
-    %tr
-      %th 郵便番号
-      %td
-        = f.text_field :postal_code
-    %tr
-      %th 都道府県
-      %td
-        = f.text_field :prefecture
-    %tr
-      %th 住所１
-      %td
-        = f.text_field :address_1
-    %tr
-      %th 住所２
-      %td
-        = f.text_field :address_2
-    %tr
-      %th 電話番号
-      %td
-        = f.text_field :phone_num_1
-        = f.text_field :phone_num_2
-        = f.text_field :phone_num_3
-  .actions
-    = f.submit "確認する"
+#body.twoColumn.clearfix
+  #contentHeader.clearfix
+    %h1
+      %span.userName.textTruncate
+        ="#{current_customer.zozo_id}様の登録情報"
+  #content.clearfix
+    %article
+      %section#secRegist.section
+        .sectionInner
+          .sectionHeader
+            %h3 基本情報
+          .contBody
+            = form_for(current_customer, url: "/customers/#{current_customer.id}/confirm/default", method: 'PATCH') do |f|
+              %table
+                %tr
+                  %th
+                    お名前
+                    %span.str
+                  %td.nameFrm
+                    = f.text_field :last_name
+                    = f.text_field :first_name
+                %tr
+                  %th お名前（カナ）
+                  %td.nameFrm
+                    = f.text_field :last_name_kana
+                    = f.text_field :first_name_kana
+                %tr
+                  %th 性別
+                  %td.sexType
+                    %label
+                      = f.radio_button :sexuality, :man
+                      男性
+                    %label
+                      = f.radio_button :sexuality, :woman
+                      女性
+                    %label
+                      = f.radio_button :sexuality, :other
+                      その他
+                %tr.secBirthType
+                  %th 生年月日
+                  %td.birthFrm.birth
+                    = f.date_select(:birthday,
+                          start_year: 1910,
+                          end_year: 2018,
+                          use_month_numbers: true,
+                          default: Date.new(1990,1,1))
+                %tr#secZipCode
+                  %th 
+                    郵便番号
+                    %span.str
+                  %td.postFrm.lineParent
+                    = f.text_field :postal_code, id: 'postal_code_form'
+                %tr.prefFrmWrap
+                  %th 都道府県
+                  %td
+                    = f.text_field :prefecture, id: 'prefecture_form'
+                %tr.add1FrmWrap
+                  %th 
+                    住所１
+                    %span.str
+                  %td
+                    = f.text_field :address_1, class: 'address_form'
+                %tr.add2FrmWrap
+                  %th 住所２
+                  %td
+                    = f.text_field :address_2, class: 'address_form'
+                %tr
+                  %th.phonFrm
+                    電話番号
+                    %span.str
+                  %td
+                    = f.text_field :phone_num_1, class: 'phone_num_form'
+                    = f.text_field :phone_num_2, class: 'phone_num_form'
+                    = f.text_field :phone_num_3, class: 'phone_num_form'
+              .actions
+                = f.submit "確認する", class: 'sendBtn'
+  = render 'customer_sidebar'
