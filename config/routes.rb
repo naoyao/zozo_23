@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   devise_for :customers
   resources :products do
     resources :images
+    resources :stocks, only:[:index,:new, :create, :update, :edit]
   end
   resources :top, only: [:index, :show]
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'top#index'
   post 'products/new' => 'products#new'
   get ' /products/:product_id/images/new' => 'images#new'
@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   patch 'customers/:id/confirm/default', to: 'customers#confirm_default'
   patch 'customers/:id/edit/default', to: 'customers#update_default'
   patch 'customers/:id/edit/email', to: 'cuscotmers#update_email'
+
 end

@@ -1,0 +1,25 @@
+%h3= "商品名：#{@product.name}"
+%br/
+%table
+  %tr
+    %th サイズ
+    %th 色
+    %th 残り在庫数
+    %th 編集する
+  - @stocks.each do |stock|
+    %tr
+      %td= stock.size
+      %td= stock.color
+      %td= stock.stock
+      %td
+        =link_to '編集する', edit_product_stock_path(@product, stock)
+= link_to '新しい在庫を登録する', new_product_stock_path(@product)
+
+
+/ %p 色
+/   %p
+/     = @stcok.color
+
+/ %p 残り在庫数
+/   %p
+/     = @stock.stock

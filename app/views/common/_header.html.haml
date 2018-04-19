@@ -38,9 +38,9 @@
               .blogSideBox.bdr.cf
                 = form_tag do
                   %p#hKeyword
-                    %input.searchQuery{:name => "keyword", :placeholder => "何かお探しですか？", :type => "text", :value => ""}/
+                    %input.searchQuery{name: "keyword", placeholder: "何かお探しですか？", type:"text", value: ""}/
                   %p#hSubmit
-                    %form.js-search-submit{"accept-charset" => "utf-8", :action => "/", :method => "get"}
+                    %form.js-search-submit{"accept-charset": "utf-8", action:"/", method:"get"}
             -# # ヘッダー検索　＠end
             -# ヘッダーアイコン
           #hCtrl
@@ -59,12 +59,12 @@
                 %li#hNotice.hPopWrap.static
                   %a
                     %span.ico.ico_notice
-                      %i.fas.fa-address-book
+                      %i.far.fa-comment
 
                 %li.hFavoriteLink.static.hPopWrap
                   %a
                     %span#hFavorite.ico.ico_favorite
-                      %i.fa.fa-heart
+                      %i.far.fa-heart
 
                 %li.hFavoriteLink.static.hPopWrap
                   %a

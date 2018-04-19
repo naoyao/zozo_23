@@ -10,24 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180413113759) do
-
-  create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string  "name",                          null: false
-    t.integer "normal_price",                  null: false
-    t.integer "discount_price"
-    t.integer "tax",                           null: false
-    t.integer "price_status"
-    t.text    "comment_1",       limit: 65535
-    t.text    "comment_2",       limit: 65535
-    t.integer "small_category",                null: false
-    t.integer "large_category",                null: false
-    t.integer "sexual_category"
-    t.date    "release_date"
-  end
-end
-
-ActiveRecord::Schema.define(version: 20180411125354) do
+ActiveRecord::Schema.define(version: 20180418084909) do
 
   create_table "customers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false
@@ -61,4 +44,37 @@ ActiveRecord::Schema.define(version: 20180411125354) do
     t.index ["email"], name: "index_customers_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_customers_on_reset_password_token", unique: true, using: :btree
   end
+
+  create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string  "image"
+    t.integer "product_id", null: false
+    t.index ["product_id"], name: "index_images_on_product_id", using: :btree
+  end
+
+  create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string  "name",                          null: false
+    t.integer "normal_price",                  null: false
+    t.integer "discount_price"
+    t.integer "tax",                           null: false
+    t.integer "price_status"
+    t.text    "comment_1",       limit: 65535
+    t.text    "comment_2",       limit: 65535
+    t.integer "small_category",                null: false
+    t.integer "large_category",                null: false
+    t.integer "sexual_category"
+    t.date    "release_date"
+  end
+
+  create_table "stocks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "product_id",  null: false
+    t.string   "color",       null: false
+    t.string   "size",        null: false
+    t.integer  "stock",       null: false
+    t.integer  "stock_limit"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["product_id"], name: "index_stocks_on_product_id", using: :btree
+  end
+
+  add_foreign_key "images", "products"
 end

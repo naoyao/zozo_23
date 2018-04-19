@@ -224,8 +224,8 @@ input[type="text"] {
     z-index: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    .fas,.fa{
-      font-size: 32px;
+    .fas,.fa,.far{
+      font-size: 28px;
     }
   }
   &Submit{
@@ -252,10 +252,7 @@ input[type="text"] {
     color: #fff;
     width: 54px;
     display: inline-block;
-    text-align: left;
-    margin-top: 10px;
-  }
-  &CtrlList > li .ico_favorite {
+  text-align: left;
     margin-top: 10px;
   }
 }
