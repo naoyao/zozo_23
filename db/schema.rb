@@ -10,6 +10,56 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20180413113759) do
+
+  create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string  "name",                          null: false
+    t.integer "normal_price",                  null: false
+    t.integer "discount_price"
+    t.integer "tax",                           null: false
+    t.integer "price_status"
+    t.text    "comment_1",       limit: 65535
+    t.text    "comment_2",       limit: 65535
+    t.integer "small_category",                null: false
+    t.integer "large_category",                null: false
+    t.integer "sexual_category"
+    t.date    "release_date"
+  end
+end
+
+ActiveRecord::Schema.define(version: 20180411125354) do
+
+  create_table "customers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "last_name"
+    t.string   "first_name"
+    t.string   "last_name_kana"
+    t.string   "first_name_kana"
+    t.integer  "postal_code"
+    t.integer  "prefecture"
+    t.string   "address_1"
+    t.string   "address_2"
+    t.string   "zozo_id"
+    t.integer  "phone_num_1"
+    t.integer  "phone_num_2"
+    t.integer  "phone_num_3"
+    t.integer  "sexuality"
+    t.datetime "birthday"
+    t.integer  "point"
+    t.integer  "check_rule"
+    t.index ["email"], name: "index_customers_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_customers_on_reset_password_token", unique: true, using: :btree
+  end
 
 end

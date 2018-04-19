@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 -# product/index.html.hamlのところ
 -# バナー
 #topBanner
@@ -35,3 +36,47 @@
               = render "products/products_leftcontent"
           -# メイン下側「このアイテムを見ている人は、こんなアイテムも見ています」
           = render "products/products_undercontent_moreviewstyle"
+=======
+.productIndex
+  - @product.each do |product|
+    %ul.productAllList
+      %li.productId
+      ID:
+      = product.id
+      %li.productName
+      品名:
+      = product.name
+      %li.productNormalPrice
+      通常価格:
+      = product.normal_price
+      (円)
+      %li.productDiscountPrice
+      割引価格:
+      = product.discount_price
+      (円)
+      %li.productPriceStatus
+      価格ステータス:
+      = product.price_status
+      %li.productComment1
+      コメント１:
+      = product.comment_1
+      %li.productComment2
+      コメント２:
+      = product.comment_2
+      %li.productSmallCategory
+      小カテゴリー:
+      = product.small_category
+      %li.productLargeCategory
+      大カテゴリー:
+      = product.large_category
+      %li.productSexualCategory
+      性別カテゴリー:
+      = product.sexual_category
+      %li.productReleaseDate
+      発売日:
+      = product.release_date
+      = link_to new_image_path do
+        .ImageBtn 画像登録
+      = link_to new_image_path do
+        .StockBtn 在庫登録
+>>>>>>> Stashed changes
