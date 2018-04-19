@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   patch 'customers/:id/confirm/default', to: 'customers#confirm_default'
   patch 'customers/:id/edit/default', to: 'customers#update_default'
   patch 'customers/:id/edit/email', to: 'cuscotmers#update_email'
+
 end
