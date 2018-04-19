@@ -38,5 +38,4 @@
       = product.release_date
       = link_to new_image_path do
         .ImageBtn 画像登録
-      = link_to new_image_path do
-        .StockBtn 在庫登録
+      = link_to '在庫登録', "/products/#{product.id}/stocks", class: 'StockBtn'

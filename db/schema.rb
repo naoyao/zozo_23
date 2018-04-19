@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180417091215) do
+
+
+ActiveRecord::Schema.define(version: 20180418084909) do
+
 
   create_table "customers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false
@@ -63,6 +66,18 @@ ActiveRecord::Schema.define(version: 20180417091215) do
     t.integer "large_category",                null: false
     t.integer "sexual_category"
     t.date    "release_date"
+  end
+
+
+  create_table "stocks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "product_id",  null: false
+    t.string   "color",       null: false
+    t.string   "size",        null: false
+    t.integer  "stock",       null: false
+    t.integer  "stock_limit"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["product_id"], name: "index_stocks_on_product_id", using: :btree
   end
 
   add_foreign_key "images", "products"
