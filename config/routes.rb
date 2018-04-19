@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   devise_for :customers
-  resources :products
-  resources :images
+  resources :products do
+    resources :images
+  end
   resources :top, only: [:index, :show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'top#index'
-
+  post 'products/new' => 'products#new'
+  get ' /products/:product_id/images/new' => 'images#new'
   resources :customers, only:[:show]
   get 'customers/:id/edit/default', to: 'customers#edit_default'
   get 'customers/:id/edit/email', to: 'customers#edit_email'

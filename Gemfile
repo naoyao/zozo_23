@@ -74,3 +74,5 @@ end
 gem 'devise'
 gem 'enum_help'
 gem 'pry-rails'
+gem 'carrierwave'
+gem 'rmagick'
