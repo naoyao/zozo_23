@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :customers
-  resources :products
   resources :images
+  resources :products do
+    resources :stocks, only:[:index,:new, :create, :update, :edit]
+  end
   resources :top, only: [:index, :show]
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'top#index'
 
   resources :customers, only:[:show]
