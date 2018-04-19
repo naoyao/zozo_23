@@ -1,42 +1,3 @@
-<<<<<<< Updated upstream
--# product/index.html.hamlのところ
--# バナー
-#topBanner
-  %a
-    %img
--# パンくずリスト
-#headNavi
-  %nav#breadCrumb
-    %ul.cf
-      %li
-        %a{href:""} ZOZOTOWN
-        = image_tag 'ico_pankuzu.png'
-      %li
-        %a{href:""} N.（N. Natural Beauty Basic）
-        = image_tag 'ico_pankuzu.png'
-      %li
-        %a{href:""} トップス
-        = image_tag 'ico_pankuzu.png'
-      %li
-        %a{href:""}ニット/セーター
-        = image_tag 'ico_pankuzu.png'
-      %li アイテム詳細
-
--# メインコンテント
-#body.inner
-  #content
-    %article
-      #goods.singleColumn.cf
-        #main
-          .innerMain
-            #goodMainArea.cf
-              -# 右カラム
-              = render "products/products_rightcontent"
-              -# 左 カラム　側画像
-              = render "products/products_leftcontent"
-          -# メイン下側「このアイテムを見ている人は、こんなアイテムも見ています」
-          = render "products/products_undercontent_moreviewstyle"
-=======
 .productIndex
   - @product.each do |product|
     %ul.productAllList
@@ -79,4 +40,3 @@
         .ImageBtn 画像登録
       = link_to new_image_path do
         .StockBtn 在庫登録
->>>>>>> Stashed changes
