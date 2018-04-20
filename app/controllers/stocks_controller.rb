@@ -20,6 +20,9 @@ class StocksController < ApplicationController
     end
   end
 
+  # def show
+  #   @stock = Stock.find(params[:id])
+  # end
 
   def edit
     @stock = Stock.find(params[:id])
