@@ -119,7 +119,7 @@ section.section .sectionHeader h2 { padding:0; }
 .sectionHeader.lined a { color:#007ebe; }
 #contentHeader h1,
 .sectionHeader h1,
-.sectionHeader h2{ font-size:18px; padding:0 0 6px 0; }
+.sectionHeader h2{ font-size:18px; }
 .lined h1,
 .lined h2{ float: left; }
 
@@ -367,11 +367,13 @@ html>/**/body #resultGuide{ padding: 10px 10px 7px\9; }
 /* ホバーで出てくるサブカテ類 */
 #searchResultSidebar li.over { position:relative; }
 #searchResultSidebar li.over:hover{ z-index:2; }
-#searchResultSidebar li.over>a{ background:url(/common_2015/img/ico/ico_arrow_4.png) no-repeat 162px center; display:block;  }
+#searchResultSidebar li.over>a{  }
 #searchResultSidebar li.over>a:hover { text-decoration:none; color:#808080; background-color:#f0f0f0; }
 #searchResultSidebar li.over li { line-height:1.4; }
 #searchResultSidebar li.over li a { padding: 7px 22px 6px !important; font-size:13px; border-bottom:none; margin:0 -10px; }
-#searchResultSidebar li.over div { position:absolute; left:-9999px; top:-99999px; box-shadow:0 2px 8px rgba(77, 77, 77, 0.2); border-radius:4px; }
+#searchResultSidebar li.over div { position:absolute;
+ // left:-9999px; top:-99999px;
+ box-shadow:0 2px 8px rgba(77, 77, 77, 0.2); border-radius:4px; }
 #searchResultSidebar li.over div ul { padding:15px 10px 15px; background:#fff; border-radius:4px; }
 #searchResultSidebar {li.over div ul li { width:180px; float:left; }}
 #searchResultSidebar li.over div ul li a { overflow:hidden; text-overflow:ellipsis; word-break:break-all; white-space:nowrap; }
