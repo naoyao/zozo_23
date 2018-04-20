@@ -79,6 +79,7 @@ p.price {
     margin-left: 15px;
     #idxCouponItem {
       border-bottom: solid 1px $sect-color-g7;
+      border-top: none;
       padding: 22px 0 25px;
       #couponItem {
         min-height: 485px;
