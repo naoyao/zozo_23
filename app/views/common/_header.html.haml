@@ -38,9 +38,9 @@
               .blogSideBox.bdr.cf
                 = form_tag do
                   %p#hKeyword
-                    %input.searchQuery{:name => "keyword", :placeholder => "何かお探しですか？", :type => "text", :value => ""}/
+                    %input.searchQuery{name: "keyword", placeholder: "何かお探しですか？", type:"text", value: ""}/
                   %p#hSubmit
-                    %form.js-search-submit{"accept-charset" => "utf-8", :action => "/", :method => "get"}
+                    %form.js-search-submit{"accept-charset": "utf-8", action:"/", method:"get"}
             -# # ヘッダー検索　＠end
             -# ヘッダーアイコン
           #hCtrl
@@ -49,17 +49,22 @@
                 %li#hUserName
                   %p#hThumbs
                     %span#hName
-                      %span.userName.textTruncate na0418 様
+                      -if customer_signed_in?
+                        %span.userName.textTruncate
+                          =link_to "#{current_customer.email}様", "/customers/#{current_customer.id}"
+                      -else
+                        %span.userName.textTruncate
+                          =link_to "ログイン", customer_session_path
 
                 %li#hNotice.hPopWrap.static
                   %a
                     %span.ico.ico_notice
-                      %i.fas.fa-address-book
+                      %i.far.fa-comment
 
                 %li.hFavoriteLink.static.hPopWrap
                   %a
                     %span#hFavorite.ico.ico_favorite
-                      %i.fa.fa-heart
+                      %i.far.fa-heart
 
                 %li.hFavoriteLink.static.hPopWrap
                   %a

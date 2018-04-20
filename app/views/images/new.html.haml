@@ -1,0 +1,7 @@
+.imageForm
+  %h2 画像登録フォーム
+  = form_for [@product, @image] do |f|
+    .newImage
+    %h5 画像投稿
+    = f.file_field :image
+    = f.submit "投稿"

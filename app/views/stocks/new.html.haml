@@ -1,0 +1,11 @@
+%h2 商品在庫の新規登録
+=form_for [@product, @stock] do |f| 
+  %p サイズ
+  = f.text_field :size, placeholder: '例：S'
+  %p 色
+  = f.text_field :color, placeholder: '例：青'
+  %p 残り在庫数
+  = f.text_field :stock, placeholder: '50'
+  %p 最大在庫数
+  = f.submit '在庫を登録する'
+
