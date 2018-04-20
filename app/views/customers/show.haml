@@ -1,0 +1,67 @@
+#body.twoColumn.clearfix
+  #contentHeader.clearfix
+    %h1
+      %span.userName.textTruncate
+        ="#{current_customer.zozo_id}様の登録情報"
+  #content.clearfix
+    %article
+      %section#secRegist.section
+        .sectionInner
+          .sectionHeader
+            %h3 会員登録情報
+          .contBody
+            %table
+              %tbody
+                %tr
+                  %th 基本情報
+                  %td
+                    = "#{current_customer.last_name} #{current_customer.first_name}（#{current_customer.last_name_kana} #{current_customer.first_name_kana}）"
+                    %br
+                    = current_customer.sexuality_i18n
+                    %br
+                    = current_customer.birthday.strftime("%Y年 %m月 %d日")
+                    %br
+                    〒
+                    = current_customer.postal_code
+                    %br
+                    = current_customer.prefecture
+                    = current_customer.address_1
+                    = current_customer.address_2
+                    %br
+                    -if current_customer.phone_num_1.present?
+                      = current_customer.phone_num_1
+                      \-
+                      = current_customer.phone_num_2
+                      \-
+                      = current_customer.phone_num_3
+                  %td.change
+                    %p.btn
+                      =link_to '変更', "/customers/#{current_customer.id}/edit/default", class: 'gBtnWhite btnSS'
+                %tr
+                  %th メールアドレス
+                  %td
+                    = current_customer.email
+                  %td.change
+                    %p.btn
+                      =link_to '変更', "/customers/#{current_customer.id}/edit/email", class: 'gBtnWhite btnSS'
+                %tr
+                  %th ZOZOID
+                  %td{colspan:'2'}
+                    = current_customer.zozo_id
+                %tr
+                  %th パスワード
+                  %td
+                    *******
+                    %span.info.passWord ※セキュリティのためパスワードは非表示となっています。
+                  %td.change
+                    %p.btn
+                      = link_to '変更', edit_customer_password_path, class: 'gBtnWhite btnSS'
+
+      %section#secCredit.section
+        .sectionInner
+          .sectionHeader
+            %h3 クレジットカード情報の変更
+          .contBody
+            %p.noRegist クレジットカード登録はありません。
+            %p.noRegist.subinfo ※新規カードの登録は、商品購入時に可能です。
+  = render 'customer_sidebar'
