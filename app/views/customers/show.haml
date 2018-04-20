@@ -56,6 +56,11 @@
                   %td.change
                     %p.btn
                       = link_to '変更', edit_customer_password_path, class: 'gBtnWhite btnSS'
+                %tr
+                  %th ログアウト
+                  %td.change
+                    %p.btn
+                      = link_to 'ログアウト', 'sign_out' , method: 'delete'
 
       %section#secCredit.section
         .sectionInner
