@@ -29,11 +29,12 @@ class ProductsController < ApplicationController
   end
 
   def show
-
+    @product = Product.find(params[:id])
+    @other_color_products = @product.stocks.limit(4)
   end
 
   private
-    def product_params
-      params.require(:product).permit(:name,:normal_price, :discount_price, :tax, :comment_1, :comment_2, :small_category, :large_category, :sexual_category, :release_date)
-    end
+  def product_params
+    params.require(:product).permit(:name,:normal_price, :discount_price, :tax, :comment_1, :comment_2, :small_category, :large_category, :sexual_category, :release_date)
+  end
 end
